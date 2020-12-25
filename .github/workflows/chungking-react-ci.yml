@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [trunk]
+    branches: [main]
     paths:
       - 'packages/chungking-react/**'
       - '.github/workflows/chungking-react-ci.yml'
