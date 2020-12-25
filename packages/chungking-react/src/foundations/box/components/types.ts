@@ -10,7 +10,7 @@ import {
   BorderProps,
   ShadowProps
 } from 'styled-system'
-import { pseudoSelectors } from './Box.utils'
+import { pseudoSelectors } from './utils'
 
 export type AllStyledProps = LayoutProps &
   FlexboxProps &

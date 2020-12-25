@@ -5,8 +5,8 @@ import { layout, flexbox, position, grid, space, background, color, typography, 
 import css, { SystemStyleObject } from '@styled-system/css'
 import shouldForwardProp from '@styled-system/should-forward-prop'
 import { Color } from '../../../utils'
-import { AllStyledProps, ExtendedBoxProps } from './Box.types'
-import { pseudoSelectors } from './Box.utils'
+import { AllStyledProps, ExtendedBoxProps } from './types'
+import { pseudoSelectors } from './utils'
 
 export interface BoxProps extends AllStyledProps, ExtendedBoxProps {
   /** Additional CSS classes to add to the component. */
