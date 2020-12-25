@@ -1,0 +1,85 @@
+on:
+  push:
+    branches: [trunk]
+    paths:
+      - 'packages/chungking-react/**'
+      - '.github/workflows/chungking-react-ci.yml'
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - 'packages/chungking-react/**'
+      - '.github/workflows/chungking-react-ci.yml'
+
+name: chungking-react
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - run: yarn install --frozen-lockfile
+      - uses: actions/cache@v1
+        id: cache-build
+        with:
+          path: '.'
+          key: ${{ github.sha }}
+
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/cache@v1
+        id: restore-build
+        with:
+          path: '.'
+          key: ${{ github.sha }}
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - run: yarn workspace @resir014/chungking-react run validate
+        env:
+          CI: true
+
+  run-tests:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/cache@v1
+        id: restore-build
+        with:
+          path: '.'
+          key: ${{ github.sha }}
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - run: yarn workspace @resir014/chungking-react run test:coverage
+        env:
+          CI: true
+
+  chromatic:
+    name: Chromatic
+    runs-on: ubuntu-latest
+    needs:
+      - validate
+      - run-tests
+    steps:
+      - uses: actions/cache@v1
+        id: restore-build
+        with:
+          path: '.'
+          key: ${{ github.sha }}
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - run: yarn workspace @resir014/chungking-react run chromatic --project-token=$CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes
+        env:
+          CI: true
+          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
