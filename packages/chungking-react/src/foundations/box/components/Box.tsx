@@ -1,14 +1,11 @@
 /* eslint-disable no-underscore-dangle */
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { layout, flexbox, position, grid, space, background, color, typography, border, shadow, compose } from 'styled-system'
 import css, { SystemStyleObject } from '@styled-system/css'
-import shouldForwardProp from '@styled-system/should-forward-prop'
 import { Color } from '../../../utils'
-import { AllStyledProps, ExtendedBoxProps } from './types'
-import { pseudoSelectors } from './utils'
+import { systemProps, pseudoSelectors, shouldForwardProp, AllSystemProps, ExtendedSystemProps } from '../../../system'
 
-export interface BoxProps extends AllStyledProps, ExtendedBoxProps {
+export interface BoxProps extends AllSystemProps, ExtendedSystemProps {
   /** Additional CSS classes to add to the component. */
   className?: string
   /** Additional CSS properties to add to the component. */
@@ -17,16 +14,14 @@ export interface BoxProps extends AllStyledProps, ExtendedBoxProps {
   color?: Color | string
 }
 
-const styledProps = compose(layout, flexbox, position, grid, space, background, color, typography, border, shadow)
-
 /**
  * Box is a primitive component with all styled-system hooks added to it. You can use it as a
  * base component for all display elements.
  */
 export const Box = styled('div', {
-  shouldForwardProp: (propName) => shouldForwardProp(propName) && propName !== 'spacing'
+  shouldForwardProp
 })<BoxProps>(
-  styledProps,
+  systemProps,
   ({
     _after,
     _focus,

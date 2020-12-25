@@ -1,30 +1,10 @@
-import styled from '@emotion/styled'
-import shouldForwardProp from '@styled-system/should-forward-prop'
-
-import { layout, space, color, typography, variant } from 'styled-system'
-
-import { TypographyProps } from './Typography'
-import { typeScale } from '../../../utils'
+import { Typography, TypographyProps } from './Typography'
 
 export type TextProps = TypographyProps
 
 /**
  * Text component provided as a styled component primitive.
  */
-export const Text = styled('span', { shouldForwardProp })<TextProps>`
-  ${variant({
-    prop: 'variant',
-    variants: typeScale
-  })}
-
-  ${layout}
-  ${space}
-  ${color}
-  ${typography}
-`
-
-Text.defaultProps = {
-  as: 'span'
-}
+export const Text = Typography.withComponent('span')
 
 Text.displayName = 'Text'

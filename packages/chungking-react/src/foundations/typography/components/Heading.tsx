@@ -1,33 +1,14 @@
-import styled from '@emotion/styled'
-import shouldForwardProp from '@styled-system/should-forward-prop'
-
-import { layout, space, color, typography, variant as styledSystemVariant } from 'styled-system'
-
-import { typeScale } from '../../../utils'
-
-import { TypographyProps } from './Typography'
+import { Typography, TypographyProps } from './Typography'
 
 export type HeadingProps = TypographyProps
 
 /**
  * Heading component provided as a styled component primitive.
  */
-const Heading = styled('span', { shouldForwardProp })<HeadingProps>`
-  ${styledSystemVariant({
-    prop: 'variant',
-    variants: typeScale
-  })}
-
-  ${layout}
-  ${space}
-  ${color}
-  ${typography}
-`
+const Heading = Typography.withComponent('h2')
 
 Heading.defaultProps = {
-  as: 'h2',
-  fontWeight: 600,
-  variant: 700
+  fontWeight: 600
 }
 
 Heading.displayName = 'Heading'

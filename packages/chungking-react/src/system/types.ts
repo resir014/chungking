@@ -10,9 +10,10 @@ import {
   BorderProps,
   ShadowProps
 } from 'styled-system'
+import { TextDecorationProps, TextTransformProps } from './system'
 import { pseudoSelectors } from './utils'
 
-export type AllStyledProps = LayoutProps &
+export type AllSystemProps = LayoutProps &
   FlexboxProps &
   PositionProps &
   GridProps &
@@ -21,6 +22,8 @@ export type AllStyledProps = LayoutProps &
   ColorProps &
   TypographyProps &
   BorderProps &
-  ShadowProps
+  ShadowProps &
+  TextDecorationProps &
+  TextTransformProps
 
-export type ExtendedBoxProps = Partial<Record<keyof typeof pseudoSelectors, AllStyledProps>>
+export type ExtendedSystemProps = Partial<Record<keyof typeof pseudoSelectors, AllSystemProps>>
