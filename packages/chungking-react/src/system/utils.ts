@@ -1,4 +1,26 @@
-/* eslint-disable import/prefer-default-export */
+import sfp from '@styled-system/should-forward-prop'
+import { layout, flexbox, position, grid, space, background, color, typography, border, shadow, compose } from 'styled-system'
+import { textDecoration, textTransform } from './system'
+
+export function shouldForwardProp(prop: string): boolean {
+  return sfp(prop) && !['textDecoration', 'textTransform', 'spacing'].includes(prop)
+}
+
+export const systemProps = compose(
+  layout,
+  flexbox,
+  position,
+  grid,
+  space,
+  background,
+  color,
+  typography,
+  border,
+  shadow,
+  textDecoration,
+  textTransform
+)
+
 export const pseudoSelectors = {
   _hover: '&:hover',
   _active: '&:active, &[data-active=true]',

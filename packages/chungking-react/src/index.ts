@@ -1,5 +1,6 @@
 export * from './components'
 export * from './foundations'
 export * from './layout'
+export * from './system'
 export * from './utils'
 export { default as ChungkingProvider } from './ChungkingProvider'
