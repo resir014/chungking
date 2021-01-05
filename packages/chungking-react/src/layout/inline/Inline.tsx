@@ -3,8 +3,8 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import { themeGet } from '@styled-system/theme-get'
 
-import { Box, BoxProps } from '../../box'
-import { Space } from '../../../utils'
+import { Space } from '../../utils'
+import { Box, BoxProps } from '../box'
 
 export interface InlineProps extends Omit<BoxProps, 'color'> {
   id?: string
