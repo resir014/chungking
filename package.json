@@ -40,6 +40,7 @@
     "clean": "yarn workspaces run clean",
     "lint": "yarn workspaces run lint",
     "prepublish": "yarn clean && yarn build",
+    "storybook": "yarn workspace @resir014/chungking-react run storybook",
     "test": "yarn workspaces run test",
     "test:coverage": "yarn workspaces run test:coverage",
     "validate": "yarn workspaces run validate"
