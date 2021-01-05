@@ -10,7 +10,7 @@ export default {
     variant: {
       control: {
         type: 'select',
-        options: ['default', 'warning']
+        options: ['default', 'primary', 'warning']
       }
     },
     children: {
