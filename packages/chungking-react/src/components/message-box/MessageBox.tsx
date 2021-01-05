@@ -7,7 +7,7 @@ import { Box, BoxProps } from '../../foundations'
 
 export interface MessageBoxProps extends BoxProps {
   className?: string
-  variant?: 'default' | 'primary' | 'warning'
+  variant?: 'default' | 'primary' | 'success' | 'warning' | 'error'
   children?: React.ReactNode
 }
 
@@ -32,9 +32,23 @@ const Root = styled(Box)<MessageBoxProps>`
           color: 'turquoise.400'
         }
       },
+      success: {
+        borderLeftColor: 'green.500',
+        backgroundColor: transparentize(0.75, colors.green[500]),
+        '& a': {
+          color: 'turquoise.400'
+        }
+      },
       warning: {
         borderLeftColor: 'orange.500',
         backgroundColor: transparentize(0.75, colors.orange[500]),
+        '& a': {
+          color: 'orange.400'
+        }
+      },
+      error: {
+        borderLeftColor: 'red.500',
+        backgroundColor: transparentize(0.75, colors.red[500]),
         '& a': {
           color: 'orange.400'
         }
