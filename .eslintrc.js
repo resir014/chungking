@@ -7,7 +7,9 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 'off',
     'react/jsx-props-no-spreading': 'off',
     'prettier/prettier': 'error',
+    'no-underscore-dangle': 'off',
     'no-use-before-define': 'off',
+    '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-use-before-define': ['error', { functions: true, classes: true, variables: true }]
   },
   overrides: [

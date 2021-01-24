@@ -11,7 +11,6 @@ import {
   ShadowProps
 } from 'styled-system'
 import { TextDecorationProps, TextTransformProps } from './system'
-import { pseudoSelectors } from './utils'
 
 export type AllSystemProps = LayoutProps &
   FlexboxProps &
@@ -25,5 +24,3 @@ export type AllSystemProps = LayoutProps &
   ShadowProps &
   TextDecorationProps &
   TextTransformProps
-
-export type ExtendedSystemProps = Partial<Record<keyof typeof pseudoSelectors, AllSystemProps>>
