@@ -5,9 +5,9 @@ import { variant } from 'styled-system'
 import css, { SystemStyleObject } from '@styled-system/css'
 
 import { TypeScale, Color, typeScale } from '../../../utils'
-import { AllSystemProps, ExtendedSystemProps, pseudoSelectors, shouldForwardProp, systemProps } from '../../../system'
+import { AllSystemProps, PseudoSystemProps, pseudoSelectors, shouldForwardProp, systemProps } from '../../../system'
 
-export interface TypographyProps extends AllSystemProps, ExtendedSystemProps {
+export interface TypographyProps extends AllSystemProps, PseudoSystemProps {
   /** Additional CSS classes to add to the component. */
   className?: string
   /** Additional CSS properties to add to the component. */
