@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-import { Space } from '../../../utils'
-import { Box, BoxProps } from '../../box'
+import { Space } from '../../utils'
+import { Box, BoxProps } from '../box'
 
 export interface StackProps extends Omit<BoxProps, 'color'> {
   id?: string

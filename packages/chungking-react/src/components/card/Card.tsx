@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { variant } from 'styled-system'
 import shouldForwardProp from '@styled-system/should-forward-prop'
 
-import { Box, BoxProps } from '../../foundations'
+import { Box, BoxProps } from '../../layout'
 
 export type CardElevation = 'single' | 'double'
 
