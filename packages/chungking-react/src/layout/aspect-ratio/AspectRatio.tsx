@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { Box, BoxProps } from '../../foundations'
+import { Box, BoxProps } from '../box'
 
 export interface AspectRatioProps extends React.PropsWithChildren<BoxProps> {
   ratio?: number
