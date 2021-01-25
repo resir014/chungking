@@ -22,9 +22,9 @@ import {
   compose
 } from 'styled-system'
 
-import { other, OtherProps, typography, typographyProps, TypographyProps } from './util'
+import { other, otherProps, OtherProps, typography, typographyProps, TypographyProps } from './util'
 
-const allProps = [...props, ...typographyProps]
+const allProps = [...props, ...typographyProps, ...otherProps]
 
 export function sfp(p: string[] = []) {
   return createShouldForwardProp([...allProps, ...p])
