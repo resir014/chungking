@@ -2,7 +2,7 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { Color } from '../../../utils'
-import { systemProps, shouldForwardProp, AllSystemProps, PseudoSystemProps, pseudoSystemProps } from '../../../system'
+import { allSystemProps, shouldForwardProp, AllSystemProps, PseudoSystemProps, pseudoSystemProps } from '../../../system'
 
 export interface BoxProps extends AllSystemProps, PseudoSystemProps {
   /** Additional CSS classes to add to the component. */
@@ -19,6 +19,6 @@ export interface BoxProps extends AllSystemProps, PseudoSystemProps {
  */
 export const Box = styled('div', {
   shouldForwardProp
-})<BoxProps>(systemProps, pseudoSystemProps)
+})<BoxProps>(allSystemProps, pseudoSystemProps)
 
 Box.displayName = 'Box'
