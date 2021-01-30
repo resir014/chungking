@@ -107,8 +107,8 @@ const GlobalStyles = css`
       text-align: left;
     }
 
-    tbody tr:nth-child(odd) td,
-    tbody tr:nth-child(odd) th {
+    tbody tr:nth-of-type(odd) td,
+    tbody tr:nth-of-type(odd) th {
       background-color: ${colors.grey[50]};
     }
   }
