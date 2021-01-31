@@ -1,4 +1,11 @@
+/* eslint-disable no-shadow */
 declare module '@styled-system/should-forward-prop' {
-  declare const shouldForwardProp: (propName: string | number | symbol) => boolean
+  // Fix: didn't support number type prop arg
+  type genericShouldForwardProp = (prop: string | number) => boolean
+
+  export const props: string[]
+  export function createShouldForwardProp(props: string[]): genericShouldForwardProp
+
+  const shouldForwardProp: genericShouldForwardProp
   export default shouldForwardProp
 }

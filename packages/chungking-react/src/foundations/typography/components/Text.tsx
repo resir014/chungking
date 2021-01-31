@@ -1,10 +1,10 @@
-import { Typography, TypographyProps } from './Typography'
+import { TypographyBase, TypographyBaseProps } from './TypographyBase'
 
-export type TextProps = TypographyProps
+export type TextProps = TypographyBaseProps
 
 /**
  * Text component provided as a styled component primitive.
  */
-export const Text = Typography.withComponent('span')
+export const Text = TypographyBase.withComponent('span')
 
 Text.displayName = 'Text'

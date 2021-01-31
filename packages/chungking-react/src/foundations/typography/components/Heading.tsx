@@ -1,11 +1,11 @@
-import { Typography, TypographyProps } from './Typography'
+import { TypographyBase, TypographyBaseProps } from './TypographyBase'
 
-export type HeadingProps = TypographyProps
+export type HeadingProps = TypographyBaseProps
 
 /**
  * Heading component provided as a styled component primitive.
  */
-const Heading = Typography.withComponent('h2')
+const Heading = TypographyBase.withComponent('h2')
 
 Heading.defaultProps = {
   fontWeight: 600
