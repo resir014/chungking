@@ -1,14 +1,16 @@
 /* eslint-disable no-underscore-dangle */
 import styled from '@emotion/styled'
-import { shouldForwardProp, PseudoProps } from '@spicy-ui/styled-system'
+import { shouldForwardProp } from '@spicy-ui/styled-system'
 import { variant } from 'styled-system'
-import { allSystemProps } from '../../../system'
-import { ParagraphScale, paragraphScale } from '../../../utils'
+import { AllSystemProps, allSystemProps, pseudo, PseudoProps } from '../../../system'
+import { Color, ParagraphScale, paragraphScale } from '../../../utils'
 import { TypographyBaseProps } from './TypographyBase'
 
-export interface ParagraphProps extends PseudoProps, Omit<TypographyBaseProps, 'variant'> {
+export interface ParagraphProps extends AllSystemProps, PseudoProps, Omit<TypographyBaseProps, 'variant'> {
   /** Size value of the paragraph. */
   variant?: ParagraphScale
+  /** Color value of the text. */
+  color?: Color | string
 }
 
 /**
@@ -19,7 +21,8 @@ export const Paragraph = styled('span', { shouldForwardProp })<TypographyBasePro
     prop: 'variant',
     variants: paragraphScale
   }),
-  allSystemProps
+  allSystemProps,
+  pseudo
 )
 
 Paragraph.displayName = 'Paragraph'
