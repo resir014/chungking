@@ -3,7 +3,7 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import { shouldForwardProp } from '@spicy-ui/styled-system'
 
-import { TypeScale, Color, typeScale } from '../../theme'
+import { TypeScale, typeScale } from '../../theme'
 import { AllSystemProps, allSystemProps, pseudo, PseudoProps, variant } from '../../system'
 
 export interface TypographyBaseProps extends AllSystemProps, PseudoProps {
@@ -14,7 +14,7 @@ export interface TypographyBaseProps extends AllSystemProps, PseudoProps {
   /** Size value of the text. */
   variant?: TypeScale
   /** Color value of the text. */
-  color?: Color | string
+  color?: string
 }
 
 /**

@@ -2,14 +2,14 @@
 import styled from '@emotion/styled'
 import { shouldForwardProp } from '@spicy-ui/styled-system'
 import { AllSystemProps, allSystemProps, pseudo, PseudoProps, variant } from '../../system'
-import { Color, ParagraphScale, paragraphScale } from '../../theme'
+import { ParagraphScale, paragraphScale } from '../../theme'
 import { TypographyBaseProps } from './TypographyBase'
 
 export interface ParagraphProps extends AllSystemProps, PseudoProps, Omit<TypographyBaseProps, 'variant'> {
   /** Size value of the paragraph. */
   variant?: ParagraphScale
   /** Color value of the text. */
-  color?: Color | string
+  color?: string
 }
 
 /**

@@ -3,7 +3,6 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import { shouldForwardProp } from '@spicy-ui/styled-system'
 import { allSystemProps, AllSystemProps, pseudo, PseudoProps } from '../../../system'
-import { Color } from '../../../theme'
 
 export interface BoxProps extends AllSystemProps, PseudoProps {
   /** Additional CSS classes to add to the component. */
@@ -11,7 +10,7 @@ export interface BoxProps extends AllSystemProps, PseudoProps {
   /** Additional CSS properties to add to the component. */
   style?: React.CSSProperties
   /** Override color props */
-  color?: Color | string
+  color?: string
 }
 
 /**
