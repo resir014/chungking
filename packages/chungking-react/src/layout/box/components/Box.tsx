@@ -1,10 +1,11 @@
 /* eslint-disable no-underscore-dangle */
 import * as React from 'react'
 import styled from '@emotion/styled'
+import { shouldForwardProp, PseudoProps } from '@spicy-ui/styled-system'
+import { allSystemProps, AllSystemProps } from '../../../system'
 import { Color } from '../../../utils'
-import { allSystemProps, shouldForwardProp, AllSystemProps, PseudoSystemProps, pseudoSystemProps } from '../../../system'
 
-export interface BoxProps extends AllSystemProps, PseudoSystemProps {
+export interface BoxProps extends AllSystemProps, PseudoProps {
   /** Additional CSS classes to add to the component. */
   className?: string
   /** Additional CSS properties to add to the component. */
@@ -19,6 +20,6 @@ export interface BoxProps extends AllSystemProps, PseudoSystemProps {
  */
 export const Box = styled('div', {
   shouldForwardProp
-})<BoxProps>(allSystemProps, pseudoSystemProps)
+})<BoxProps>(allSystemProps)
 
 Box.displayName = 'Box'

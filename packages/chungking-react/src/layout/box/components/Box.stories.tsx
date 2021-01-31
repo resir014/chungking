@@ -14,7 +14,7 @@ export const Example: Story = () => {
 
 export const StyleProps: Story = () => {
   return (
-    <Box pt={0} backgroundColor="grey.900" color="white" p="md">
+    <Box backgroundColor="grey.900" color="white" p="md">
       I&apos;m inside a box!
     </Box>
   )

@@ -2687,6 +2687,15 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@spicy-ui/styled-system@^0.0.1-alpha.2":
+  version "0.0.1-alpha.2"
+  resolved "https://registry.yarnpkg.com/@spicy-ui/styled-system/-/styled-system-0.0.1-alpha.2.tgz#6d22690548037ac70752d0443ba663296ffbd1dc"
+  integrity sha512-ADcFnoZxYVMh7tb5pcaU/SqowX1S87RjD9WB2ENNeFuebYUJcssWRLoL5yihhCojLdRTpJ5Ff3uyub8EvQEOkg==
+  dependencies:
+    "@emotion/is-prop-valid" "^1.0.0"
+    "@emotion/memoize" "^0.7.5"
+    csstype "^3.0.6"
+
 "@storybook/addon-actions@6.1.10":
   version "6.1.10"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-6.1.10.tgz#3742c316e914e2aef661a132e4d7e6c334e89997"

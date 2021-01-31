@@ -2,11 +2,12 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { variant } from 'styled-system'
+import { shouldForwardProp, PseudoProps } from '@spicy-ui/styled-system'
 
 import { TypeScale, Color, typeScale } from '../../../utils'
-import { AllSystemProps, PseudoSystemProps, shouldForwardProp, allSystemProps, pseudoSystemProps } from '../../../system'
+import { AllSystemProps, allSystemProps } from '../../../system'
 
-export interface TypographyBaseProps extends AllSystemProps, PseudoSystemProps {
+export interface TypographyBaseProps extends AllSystemProps, PseudoProps {
   /** Additional CSS classes to add to the component. */
   className?: string
   /** Additional CSS properties to add to the component. */
@@ -25,8 +26,7 @@ export const TypographyBase = styled('span', { shouldForwardProp })<TypographyBa
     prop: 'variant',
     variants: typeScale
   }),
-  allSystemProps,
-  pseudoSystemProps
+  allSystemProps
 )
 
 TypographyBase.displayName = 'TypographyBase'
