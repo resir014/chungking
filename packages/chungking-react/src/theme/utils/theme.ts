@@ -11,7 +11,9 @@ export const theme = {
   mediaQueries
 }
 
-export type Color = keyof typeof theme['colors']
-export type Space = keyof typeof theme['space']
-export type TypeScale = keyof typeof theme['typeScale']
-export type ParagraphScale = keyof typeof theme['paragraphScale']
+export type Theme = typeof theme
+
+export type Color = keyof Theme['colors']
+export type Space = keyof Theme['space']
+export type TypeScale = keyof Theme['typeScale']
+export type ParagraphScale = keyof Theme['paragraphScale']

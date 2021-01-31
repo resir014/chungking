@@ -2,7 +2,7 @@ import * as React from 'react'
 import { variant } from 'styled-system'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
-import { colors, space } from '../../utils'
+import { colors, space } from '../../theme'
 import { Box, BoxProps } from '../../layout'
 
 export interface MessageBoxProps extends BoxProps {

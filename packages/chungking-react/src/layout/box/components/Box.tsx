@@ -3,7 +3,7 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import { shouldForwardProp } from '@spicy-ui/styled-system'
 import { allSystemProps, AllSystemProps, pseudo, PseudoProps } from '../../../system'
-import { Color } from '../../../utils'
+import { Color } from '../../../theme'
 
 export interface BoxProps extends AllSystemProps, PseudoProps {
   /** Additional CSS classes to add to the component. */

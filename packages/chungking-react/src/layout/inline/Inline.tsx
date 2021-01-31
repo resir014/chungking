@@ -3,7 +3,7 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import { get } from '@spicy-ui/styled-system'
 
-import { Space } from '../../utils'
+import { Space } from '../../theme'
 import { Box, BoxProps } from '../box'
 
 export interface InlineProps extends Omit<BoxProps, 'color'> {

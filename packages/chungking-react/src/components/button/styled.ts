@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import { darken, transparentize } from 'polished'
-import { colors, fonts } from '../../utils'
+import { colors, fonts } from '../../theme'
 
 export const DisabledButtonStyles = css`
   &:disabled,

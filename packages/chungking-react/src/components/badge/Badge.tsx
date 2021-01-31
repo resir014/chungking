@@ -1,6 +1,6 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { variant } from 'styled-system'
+import { variant as styledSystemVariant } from 'styled-system'
 
 import { Box, BoxProps } from '../../layout'
 
@@ -18,7 +18,7 @@ const Root = styled(Box)<BadgeProps>`
   border: 1px solid transparent;
   border-radius: 3px;
 
-  ${variant({
+  ${styledSystemVariant({
     variants: {
       white: {
         color: '#202340',
