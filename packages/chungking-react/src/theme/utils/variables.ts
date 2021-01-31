@@ -145,10 +145,9 @@ export const space = {
   xxl: 48
 }
 
-export const breakpoints = [0, '576px', '768px', '992px', '1200px']
+export const breakpoints = ['576px', '768px', '992px', '1200px']
 
 export const mediaQueries = {
-  xs: `@media screen and (min-width: ${breakpoints[0]})`,
   sm: `@media screen and (min-width: ${breakpoints[1]})`,
   md: `@media screen and (min-width: ${breakpoints[2]})`,
   lg: `@media screen and (min-width: ${breakpoints[3]})`,
