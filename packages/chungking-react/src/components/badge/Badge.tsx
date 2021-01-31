@@ -32,18 +32,15 @@ const Root = styled(Box)<BadgeProps>`
   })}
 `
 
-const Badge: React.FC<BadgeProps> = ({ children, className, style, ...rest }) => {
+const Badge: React.ForwardRefRenderFunction<HTMLDivElement, BadgeProps> = (
+  { children, className, style, variant = 'white', ...rest },
+  ref
+) => {
   return (
-    <Root as="span" display="inline-flex" alignItems="center" className={className} style={style} {...rest}>
+    <Root ref={ref} as="span" display="inline-flex" alignItems="center" className={className} style={style} variant={variant} {...rest}>
       {children}
     </Root>
   )
 }
 
-Badge.defaultProps = {
-  className: undefined,
-  style: undefined,
-  variant: 'white'
-}
-
-export default Badge
+export default React.forwardRef(Badge)
