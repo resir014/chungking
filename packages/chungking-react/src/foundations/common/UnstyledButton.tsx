@@ -1,46 +1,11 @@
+import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import {
-  layout,
-  LayoutProps,
-  position,
-  PositionProps,
-  flexbox,
-  FlexboxProps,
-  grid,
-  GridProps,
-  space,
-  SpaceProps,
-  background,
-  BackgroundProps,
-  color,
-  ColorProps,
-  typography,
-  TypographyProps,
-  border,
-  BorderProps,
-  shadow,
-  ShadowProps
-} from 'styled-system'
+import { pseudo, PseudoProps, shouldForwardProp } from '@spicy-ui/styled-system'
+import { AllSystemProps, allSystemProps } from '../../system'
 
-export interface UnstyledButtonProps
-  extends LayoutProps,
-    PositionProps,
-    FlexboxProps,
-    GridProps,
-    SpaceProps,
-    BackgroundProps,
-    ColorProps,
-    TypographyProps,
-    BorderProps,
-    ShadowProps {
-  /**
-   * Extended color props. We need this because default `color` prop clashes with `styled-system`.
-   */
-  color?: string
-}
+export type UnstyledButtonProps = AllSystemProps & PseudoProps
 
-/** A button element with all styling elements removed (incl. hover/focus effects). */
-const UnstyledButton = styled('button')<UnstyledButtonProps>`
+const UnstyledButtonStyles = css`
   width: auto;
   margin: 0;
   padding: 0;
@@ -66,18 +31,12 @@ const UnstyledButton = styled('button')<UnstyledButtonProps>`
     border: 0;
     padding: 0;
   }
-
-  ${layout}
-  ${position}
-  ${flexbox}
-  ${grid}
-  ${space}
-  ${background}
-  ${color}
-  ${typography}
-  ${border}
-  ${shadow}
 `
+
+/** A button element with all styling elements removed (incl. hover/focus effects). */
+const UnstyledButton = styled('button', {
+  shouldForwardProp
+})<UnstyledButtonProps>(UnstyledButtonStyles, allSystemProps, pseudo)
 
 UnstyledButton.displayName = 'UnstyledButton'
 

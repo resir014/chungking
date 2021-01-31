@@ -1,8 +1,8 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { variant } from 'styled-system'
 
 import { Box, BoxProps } from '../../layout'
+import { variant as styledSystemVariant } from '../../system'
 
 export interface BadgeProps extends BoxProps {
   className?: string
@@ -18,7 +18,7 @@ const Root = styled(Box)<BadgeProps>`
   border: 1px solid transparent;
   border-radius: 3px;
 
-  ${variant({
+  ${styledSystemVariant({
     variants: {
       white: {
         color: '#202340',
@@ -32,18 +32,15 @@ const Root = styled(Box)<BadgeProps>`
   })}
 `
 
-const Badge: React.FC<BadgeProps> = ({ children, className, style, ...rest }) => {
+const Badge: React.ForwardRefRenderFunction<HTMLDivElement, BadgeProps> = (
+  { children, className, style, variant = 'white', ...rest },
+  ref
+) => {
   return (
-    <Root as="span" display="inline-flex" alignItems="center" className={className} style={style} {...rest}>
+    <Root ref={ref} as="span" display="inline-flex" alignItems="center" className={className} style={style} variant={variant} {...rest}>
       {children}
     </Root>
   )
 }
 
-Badge.defaultProps = {
-  className: undefined,
-  style: undefined,
-  variant: 'white'
-}
-
-export default Badge
+export default React.forwardRef(Badge)

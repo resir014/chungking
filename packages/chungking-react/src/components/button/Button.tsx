@@ -1,13 +1,16 @@
 import * as React from 'react'
 import { transparentize } from 'polished'
-import { variant as styledSystemVariant } from 'styled-system'
 import styled from '@emotion/styled'
-import { themeGet } from '@styled-system/theme-get'
+import { get, sfp } from '@spicy-ui/styled-system'
+
+import { variant as styledSystemVariant } from '../../system'
 import { ButtonBase, DisabledButtonStyles } from './styled'
 import { ButtonBaseProps, ButtonProps } from './types'
 import { buttonSizes, buttonVariants } from './variants'
 
-const Root = styled('button')<ButtonBaseProps>`
+export const buttonProps = ['size']
+
+const Root = styled('button', { shouldForwardProp: sfp(buttonProps) })<ButtonBaseProps>`
   ${ButtonBase}
 
   ${styledSystemVariant({
@@ -22,7 +25,7 @@ const Root = styled('button')<ButtonBaseProps>`
 
     &:focus,
     &:active {
-      box-shadow: 0 0 0 3px ${(props) => transparentize(0.4, themeGet('colors.turquoise.400')(props))};
+      box-shadow: 0 0 0 3px ${({ theme }) => transparentize(0.4, get(theme, 'colors.turquoise.400'))};
     }
   }
 

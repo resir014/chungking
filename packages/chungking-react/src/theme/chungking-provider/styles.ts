@@ -1,8 +1,8 @@
 import { css } from '@emotion/react'
 import { transparentize } from 'polished'
-import { fonts, colors, space } from './variables'
+import { Theme } from '../utils'
 
-const GlobalStyles = css`
+const styles = (theme: Theme) => css`
   html {
     height: 100%;
     box-sizing: border-box;
@@ -22,7 +22,7 @@ const GlobalStyles = css`
     position: relative;
     min-height: 100%;
     margin: 0;
-    font-family: ${fonts.sansSerif};
+    font-family: ${theme.fonts.sansSerif};
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -30,8 +30,8 @@ const GlobalStyles = css`
 
   html,
   body {
-    color: ${colors.grey[50]};
-    background-color: ${colors.black};
+    color: ${theme.colors.grey[50]};
+    background-color: ${theme.colors.black};
   }
 
   h1,
@@ -60,18 +60,18 @@ const GlobalStyles = css`
     &:focus,
     &:active {
       outline: none;
-      box-shadow: 0 0 0 3px ${transparentize(0.4, colors.turquoise[400])};
+      box-shadow: 0 0 0 3px ${transparentize(0.4, theme.colors.turquoise[400])};
     }
   }
 
   img {
     display: block;
     max-width: 100%;
-    margin: 0 0 ${space.md}px;
+    margin: 0 0 ${theme.space.md}px;
   }
 
   figure {
-    margin: ${space.xl}px 0;
+    margin: ${theme.space.xl}px 0;
   }
 
   figcaption {
@@ -80,7 +80,7 @@ const GlobalStyles = css`
 
   code,
   pre {
-    font-family: ${fonts.monospace};
+    font-family: ${theme.fonts.monospace};
   }
 
   #___gatsby,
@@ -91,16 +91,16 @@ const GlobalStyles = css`
   }
 
   table {
-    margin-bottom: ${space.sm}px;
+    margin-bottom: ${theme.space.sm}px;
     width: 100%;
     font-size: 85%;
-    border: 1px solid ${colors.grey[100]};
+    border: 1px solid ${theme.colors.grey[100]};
     border-collapse: collapse;
 
     td,
     th {
-      padding: ${space.xxs}px ${space.xs}px;
-      border: 1px solid ${colors.grey[100]};
+      padding: ${theme.space.xxs}px ${theme.space.xs}px;
+      border: 1px solid ${theme.colors.grey[100]};
     }
 
     th {
@@ -109,7 +109,7 @@ const GlobalStyles = css`
 
     tbody tr:nth-of-type(odd) td,
     tbody tr:nth-of-type(odd) th {
-      background-color: ${colors.grey[50]};
+      background-color: ${theme.colors.grey[50]};
     }
   }
 
@@ -118,7 +118,7 @@ const GlobalStyles = css`
   }
 
   strong {
-    color: ${colors.white};
+    color: ${theme.colors.white};
   }
 
   dt {
@@ -127,14 +127,14 @@ const GlobalStyles = css`
 
   dd {
     margin-left: 0;
-    margin-bottom: ${space.xs}px;
+    margin-bottom: ${theme.space.xs}px;
   }
 
   hr {
     position: relative;
-    margin: ${space.xl}px 0;
+    margin: ${theme.space.xl}px 0;
     border: 0;
-    border-bottom: 1px solid ${colors.grey[800]};
+    border-bottom: 1px solid ${theme.colors.grey[800]};
   }
 
   abbr {
@@ -143,7 +143,7 @@ const GlobalStyles = css`
 
     &[title] {
       cursor: help;
-      border-bottom: 1px dotted ${colors.grey[200]};
+      border-bottom: 1px dotted ${theme.colors.grey[200]};
     }
   }
 
@@ -169,4 +169,4 @@ const GlobalStyles = css`
   }
 `
 
-export default GlobalStyles
+export default styles

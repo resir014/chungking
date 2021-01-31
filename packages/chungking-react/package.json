@@ -37,16 +37,11 @@
     "react-dom": "^16.8.0 || ^17.0.0"
   },
   "dependencies": {
-    "@styled-system/css": "^5.1.5",
-    "@styled-system/should-forward-prop": "^5.1.5",
-    "@styled-system/theme-get": "^5.1.2",
-    "@types/styled-system": "^5.1.10",
-    "@types/styled-system__css": "^5.0.14",
-    "@types/styled-system__theme-get": "^5.0.1",
+    "@spicy-ui/styled-system": "^0.0.1-alpha.2",
     "clsx": "^1.1.1",
     "csstype": "^3.0.6",
-    "polished": "^4.0.5",
-    "styled-system": "^5.1.5"
+    "deepmerge": "^4.2.2",
+    "polished": "^4.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

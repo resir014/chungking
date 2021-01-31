@@ -1,7 +1,7 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
-import { colors, space } from '../../utils'
+import { colors, space } from '../../theme'
 import Card, { CardProps } from './Card'
 
 export default {

@@ -1,9 +1,9 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { variant } from 'styled-system'
-import shouldForwardProp from '@styled-system/should-forward-prop'
+import { sfp } from '@spicy-ui/styled-system'
 
 import { Box, BoxProps } from '../../layout'
+import { variant } from '../../system'
 
 export type CardElevation = 'single' | 'double'
 
@@ -12,11 +12,9 @@ export interface CardProps extends BoxProps {
   children?: React.ReactNode
 }
 
-const shouldReallyForwardProp = (propName: string) => {
-  return shouldForwardProp(propName) && propName !== 'elevation'
-}
+export const cardProps = ['elevation']
 
-const Root = styled(Box, { shouldForwardProp: shouldReallyForwardProp })<CardProps>`
+const Root = styled(Box, { shouldForwardProp: sfp(cardProps) })<CardProps>`
   ${variant({
     prop: 'elevation',
     variants: {

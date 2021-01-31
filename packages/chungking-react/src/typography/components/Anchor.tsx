@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 
 import { Text, TextProps } from './Text'
-import { colors, mediaQueries } from '../../../utils'
+import { colors, mediaQueries } from '../../theme'
 
 export type AnchorProps = TextProps & React.AnchorHTMLAttributes<HTMLAnchorElement>
 
