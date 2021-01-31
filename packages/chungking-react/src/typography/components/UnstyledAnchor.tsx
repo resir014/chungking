@@ -1,7 +1,7 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
-import { pseudo, PseudoProps, shouldForwardProp } from '@spicy-ui/styled-system'
-import { AllSystemProps, allSystemProps } from '../../system'
+import { shouldForwardProp } from '@spicy-ui/styled-system'
+import { allSystemProps, AllSystemProps, pseudo, PseudoProps } from '../../system'
 
 export type UnstyledAnchorProps = AllSystemProps & PseudoProps
 
