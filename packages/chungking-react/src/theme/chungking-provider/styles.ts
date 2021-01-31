@@ -2,7 +2,7 @@ import { css } from '@emotion/react'
 import { transparentize } from 'polished'
 import { Theme } from '../utils'
 
-export const styles = (theme: Theme) => css`
+const styles = (theme: Theme) => css`
   html {
     height: 100%;
     box-sizing: border-box;
@@ -168,3 +168,5 @@ export const styles = (theme: Theme) => css`
     }
   }
 `
+
+export default styles
