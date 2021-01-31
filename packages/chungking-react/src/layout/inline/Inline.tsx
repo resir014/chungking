@@ -1,7 +1,7 @@
 /* eslint-disable react/no-array-index-key */
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { themeGet } from '@styled-system/theme-get'
+import { get } from '@spicy-ui/styled-system'
 
 import { Space } from '../../utils'
 import { Box, BoxProps } from '../box'
@@ -15,11 +15,11 @@ export interface InlineProps extends Omit<BoxProps, 'color'> {
 }
 
 const Root = styled(Box)<InlineProps>`
-  ${(props) => props.spacing && `margin-top: -${themeGet(`space.${props.spacing}`)(props)}px;`}
+  ${({ theme, spacing }) => spacing && `margin-top: -${get(theme, `space.${spacing}`)}px;`}
 `
 
 const Inner = styled(Box)<InlineProps>`
-  ${(props) => props.spacing && `margin-left: -${themeGet(`space.${props.spacing}`)(props)}px;`}
+  ${({ theme, spacing }) => spacing && `margin-left: -${get(theme, `space.${spacing}`)}px;`}
 `
 
 const Inline: React.FC<InlineProps> = ({ children, spacing, alignItems, ...rest }) => {
