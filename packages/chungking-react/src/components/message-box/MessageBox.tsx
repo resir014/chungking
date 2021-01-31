@@ -1,7 +1,7 @@
 import * as React from 'react'
-import { variant } from 'styled-system'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
+import { variant } from '../../system'
 import { colors, space } from '../../theme'
 import { Box, BoxProps } from '../../layout'
 

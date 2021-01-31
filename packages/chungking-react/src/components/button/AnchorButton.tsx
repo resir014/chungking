@@ -1,10 +1,10 @@
 import * as React from 'react'
 import { transparentize } from 'polished'
-import { variant as styledSystemVariant } from 'styled-system'
 import styled from '@emotion/styled'
 import { get, sfp } from '@spicy-ui/styled-system'
 import classnames from 'clsx'
 
+import { variant as styledSystemVariant } from '../../system'
 import { ButtonBaseProps, AnchorButtonProps } from './types'
 import { ButtonBase } from './styled'
 import { buttonVariants, buttonSizes } from './variants'

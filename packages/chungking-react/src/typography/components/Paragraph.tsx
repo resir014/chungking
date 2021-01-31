@@ -1,8 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import styled from '@emotion/styled'
 import { shouldForwardProp } from '@spicy-ui/styled-system'
-import { variant } from 'styled-system'
-import { AllSystemProps, allSystemProps, pseudo, PseudoProps } from '../../system'
+import { AllSystemProps, allSystemProps, pseudo, PseudoProps, variant } from '../../system'
 import { Color, ParagraphScale, paragraphScale } from '../../theme'
 import { TypographyBaseProps } from './TypographyBase'
 

@@ -1,9 +1,9 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { variant } from 'styled-system'
 import { sfp } from '@spicy-ui/styled-system'
 
 import { Box, BoxProps } from '../../layout'
+import { variant } from '../../system'
 
 export type CardElevation = 'single' | 'double'
 

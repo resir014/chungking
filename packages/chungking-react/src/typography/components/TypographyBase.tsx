@@ -1,11 +1,10 @@
 /* eslint-disable no-underscore-dangle */
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { variant } from 'styled-system'
 import { shouldForwardProp } from '@spicy-ui/styled-system'
 
 import { TypeScale, Color, typeScale } from '../../theme'
-import { AllSystemProps, allSystemProps, pseudo, PseudoProps } from '../../system'
+import { AllSystemProps, allSystemProps, pseudo, PseudoProps, variant } from '../../system'
 
 export interface TypographyBaseProps extends AllSystemProps, PseudoProps {
   /** Additional CSS classes to add to the component. */
