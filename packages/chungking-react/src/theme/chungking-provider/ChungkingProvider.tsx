@@ -10,7 +10,7 @@ export interface ChungkingProviderProps {
 }
 
 const ChungkingProvider: React.FC<ChungkingProviderProps> = ({ children, theme = {} }) => {
-  const mergedTheme = React.useMemo(() => deepmerge(defaultTheme, theme as any), [theme])
+  const mergedTheme = React.useMemo(() => deepmerge(defaultTheme, theme), [theme])
 
   return (
     <ThemeProvider theme={mergedTheme}>
