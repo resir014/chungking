@@ -1,2 +1,1 @@
-export * from './chungking-provider'
-export * from './utils'
+export * from './theme'

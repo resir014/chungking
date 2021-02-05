@@ -2,19 +2,19 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 
 import { Text, TextProps } from './Text'
-import { colors, mediaQueries } from '../../theme'
+import { theme } from '../../theme'
 
 export type AnchorProps = TextProps & React.AnchorHTMLAttributes<HTMLAnchorElement>
 
 const AnchorBase = styled(Text)`
-  color: ${colors.turquoise[400]};
+  color: ${theme.colors.turquoise[400]};
   text-decoration: underline;
 
   strong {
     color: inherit;
   }
 
-  ${mediaQueries.md} {
+  ${theme.mediaQueries.md} {
     text-decoration: none;
 
     &:hover,

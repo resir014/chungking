@@ -2,7 +2,7 @@
 import styled from '@emotion/styled'
 import { shouldForwardProp } from '@spicy-ui/styled-system'
 import { AllSystemProps, allSystemProps, pseudo, PseudoProps, variant } from '../../system'
-import { ParagraphScale, paragraphScale } from '../../theme'
+import { ParagraphScale } from '../../theme'
 import { TypographyBaseProps } from './TypographyBase'
 
 export interface ParagraphProps extends AllSystemProps, PseudoProps, Omit<TypographyBaseProps, 'variant'> {
@@ -18,7 +18,7 @@ export interface ParagraphProps extends AllSystemProps, PseudoProps, Omit<Typogr
 export const Paragraph = styled('span', { shouldForwardProp })<TypographyBaseProps>(
   variant({
     prop: 'variant',
-    variants: paragraphScale
+    scale: 'paragraphScale'
   }),
   allSystemProps,
   pseudo

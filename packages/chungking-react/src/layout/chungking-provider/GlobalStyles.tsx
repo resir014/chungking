@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { Global, useTheme } from '@emotion/react'
-import { Theme } from '../utils'
+import { Theme } from '../../theme'
 import styles from './styles'
 
 const GlobalStyles: React.FC = () => {

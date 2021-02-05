@@ -1,13 +1,9 @@
-import { colors, space, fonts, shadows, breakpoints, mediaQueries, typeScale, paragraphScale } from './variables'
+import foundations from './foundations'
+import { typeScale, paragraphScale } from './variables'
 
 export const theme = {
-  breakpoints,
-  colors,
-  fonts,
-  mediaQueries,
+  ...foundations,
   paragraphScale,
-  shadows,
-  space,
   typeScale
 }
 

@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import { transparentize } from 'polished'
-import { Theme } from '../utils'
+import { Theme } from '../../theme'
 
 const styles = (theme: Theme) => css`
   html {
