@@ -1,7 +1,7 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
-import { colors, space } from '../../theme'
+import { theme } from '../../theme'
 import Card, { CardProps } from './Card'
 
 export default {
@@ -17,13 +17,13 @@ export default {
     p: {
       control: {
         type: 'select',
-        options: Object.keys(space)
+        options: Object.keys(theme.space)
       }
     },
     backgroundColor: {
       control: {
         type: 'select',
-        options: Object.keys(colors)
+        options: Object.keys(theme.colors)
       }
     },
     children: {

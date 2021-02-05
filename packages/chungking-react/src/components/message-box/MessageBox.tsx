@@ -2,7 +2,7 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 import { transparentize } from 'polished'
 import { variant } from '../../system'
-import { colors, space } from '../../theme'
+import { theme } from '../../theme'
 import { Box, BoxProps } from '../../layout'
 
 export interface MessageBoxProps extends BoxProps {
@@ -12,7 +12,7 @@ export interface MessageBoxProps extends BoxProps {
 }
 
 const Root = styled(Box)<MessageBoxProps>`
-  padding: ${space.md}px;
+  padding: ${theme.space.md}px;
   border-left: 2px solid transparent;
 
   ${variant({
@@ -20,35 +20,35 @@ const Root = styled(Box)<MessageBoxProps>`
     variants: {
       default: {
         borderLeftColor: 'grey.500',
-        backgroundColor: transparentize(0.75, colors.grey[500]),
+        backgroundColor: transparentize(0.75, theme.colors.grey[500]),
         '& a': {
           color: 'turquoise.400'
         }
       },
       primary: {
         borderLeftColor: 'blue.500',
-        backgroundColor: transparentize(0.75, colors.blue[500]),
+        backgroundColor: transparentize(0.75, theme.colors.blue[500]),
         '& a': {
           color: 'turquoise.400'
         }
       },
       success: {
         borderLeftColor: 'green.500',
-        backgroundColor: transparentize(0.75, colors.green[500]),
+        backgroundColor: transparentize(0.75, theme.colors.green[500]),
         '& a': {
           color: 'turquoise.400'
         }
       },
       warning: {
         borderLeftColor: 'orange.500',
-        backgroundColor: transparentize(0.75, colors.orange[500]),
+        backgroundColor: transparentize(0.75, theme.colors.orange[500]),
         '& a': {
           color: 'orange.400'
         }
       },
       error: {
         borderLeftColor: 'red.500',
-        backgroundColor: transparentize(0.75, colors.red[500]),
+        backgroundColor: transparentize(0.75, theme.colors.red[500]),
         '& a': {
           color: 'orange.400'
         }

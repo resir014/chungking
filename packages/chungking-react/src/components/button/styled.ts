@@ -1,12 +1,12 @@
 import { css } from '@emotion/react'
 import { darken, transparentize } from 'polished'
-import { colors, fonts } from '../../theme'
+import { theme } from '../../theme'
 
 export const DisabledButtonStyles = css`
   &:disabled,
   &.disabled {
-    background-color: ${colors.grey[700]};
-    color: ${colors.white};
+    background-color: ${theme.colors.grey[700]};
+    color: ${theme.colors.white};
     user-select: none;
     opacity: 0.5;
     cursor: not-allowed;
@@ -24,22 +24,22 @@ export const GhostedButtonStyles = css`
   border-radius: 8px;
 
   &:not(:disabled):not(.disabled) {
-    color: ${colors.white};
+    color: ${theme.colors.white};
 
     &:hover,
     &:focus {
-      background-color: ${transparentize(0.9, colors.white)};
+      background-color: ${transparentize(0.9, theme.colors.white)};
     }
 
     &:focus,
     &:active {
-      box-shadow: 0 0 0 3px ${transparentize(0.4, colors.turquoise[400])};
+      box-shadow: 0 0 0 3px ${transparentize(0.4, theme.colors.turquoise[400])};
     }
   }
 
   &:disabled,
   &.disabled {
-    color: ${darken(0.5, colors.white)};
+    color: ${darken(0.5, theme.colors.white)};
     user-select: none;
     cursor: not-allowed;
 
@@ -58,7 +58,7 @@ export const ButtonBase = css`
   padding: 0;
   border: none;
   background: none;
-  font-family: ${fonts.sansSerif};
+  font-family: ${theme.fonts.sansSerif};
   user-select: none;
   outline: none;
   width: auto;

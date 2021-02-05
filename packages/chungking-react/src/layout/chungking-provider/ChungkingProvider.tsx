@@ -1,7 +1,7 @@
 import deepmerge from 'deepmerge'
 import * as React from 'react'
 import { ThemeProvider } from '@emotion/react'
-import { theme as defaultTheme, Theme } from '../utils'
+import { theme as defaultTheme, Theme } from '../../theme'
 import GlobalStyles from './GlobalStyles'
 
 export interface ChungkingProviderProps {
