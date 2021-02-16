@@ -19,4 +19,8 @@ export interface ParagraphProps extends AllSystemProps, PseudoProps, Omit<Typogr
  */
 export const Paragraph = styled('p', { shouldForwardProp })<TypographyBaseProps>(getComponentStyles('paragraph'), allSystemProps, pseudo)
 
+Paragraph.defaultProps = {
+  variant: 400
+}
+
 Paragraph.displayName = 'Paragraph'

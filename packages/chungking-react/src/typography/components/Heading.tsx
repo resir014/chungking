@@ -12,6 +12,7 @@ export type HeadingProps = TypographyBaseProps
 const Heading = styled('h2', { shouldForwardProp })<TypographyBaseProps>(getComponentStyles('heading'), allSystemProps, pseudo)
 
 Heading.defaultProps = {
+  variant: 800,
   fontWeight: 600
 }
 
