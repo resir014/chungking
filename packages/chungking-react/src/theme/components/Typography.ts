@@ -1,121 +1,141 @@
-import { mediaQueries } from '../foundations'
+import { Theme } from '@emotion/react'
+import { ComponentThemeConfig } from '../types'
 
-export const Text = {
+export const text: ComponentThemeConfig = {
   propToScaleMap: [['variant', 'variants']],
   scales: {
     variants: {
-      900: {
+      900: ({ theme }) => ({
         fontSize: '32px',
         lineHeight: '36px',
-        [mediaQueries.lg]: {
+        [theme.mediaQueries.lg]: {
           fontSize: '44px',
           lineHeight: '48px'
         }
-      },
-      800: {
+      }),
+      800: ({ theme }) => ({
         fontSize: '24px',
         lineHeight: '28px',
-        [mediaQueries.lg]: {
+        [theme.mediaQueries.lg]: {
           fontSize: '32px',
           lineHeight: '36px'
         }
-      },
-      700: {
+      }),
+      700: ({ theme }) => ({
         fontSize: '22px',
         lineHeight: '26px',
-        [mediaQueries.lg]: {
+        [theme.mediaQueries.lg]: {
           fontSize: '28px',
           lineHeight: '32px'
         }
-      },
-      600: {
+      }),
+      600: ({ theme }) => ({
         fontSize: '20px',
         lineHeight: '24px',
-        [mediaQueries.lg]: {
+        [theme.mediaQueries.lg]: {
           fontSize: '24px',
           lineHeight: '28px'
         }
-      },
-      500: {
+      }),
+      500: ({ theme }) => ({
         fontSize: '18px',
         lineHeight: '22px',
-        [mediaQueries.lg]: {
+        [theme.mediaQueries.lg]: {
           fontSize: '20px',
           lineHeight: '24px'
         }
-      },
-      body: {
+      }),
+      body: ({ theme }) => ({
         fontSize: '16px',
         lineHeight: '24px',
-        [mediaQueries.lg]: {
+        [theme.mediaQueries.lg]: {
           fontSize: '16px',
           lineHeight: '24px'
         }
-      },
-      400: {
+      }),
+      400: ({ theme }) => ({
         fontSize: '16px',
         lineHeight: '20px',
-        [mediaQueries.lg]: {
+        [theme.mediaQueries.lg]: {
           fontSize: '16px',
           lineHeight: '20px'
         }
-      },
-      300: {
+      }),
+      300: ({ theme }) => ({
         fontSize: '15px',
         lineHeight: '18px',
-        [mediaQueries.lg]: {
+        [theme.mediaQueries.lg]: {
           fontSize: '14px',
           lineHeight: '18px'
         }
-      },
-      200: {
+      }),
+      200: ({ theme }) => ({
         fontSize: '14px',
         lineHeight: '18px',
-        [mediaQueries.lg]: {
+        [theme.mediaQueries.lg]: {
           fontSize: '13px',
           lineHeight: '16px'
         }
-      },
-      100: {
+      }),
+      100: ({ theme }) => ({
         fontSize: '12px',
         lineHeight: '16px',
-        [mediaQueries.lg]: {
+        [theme.mediaQueries.lg]: {
           fontSize: '12px',
           lineHeight: '16px'
         }
-      }
+      })
     }
   }
 }
 
-export const Paragraph = {
+export const paragraph: ComponentThemeConfig = {
   propToScaleMap: [['variant', 'variants']],
   scales: {
     variants: {
-      500: {
+      500: ({ theme }) => ({
         fontSize: '18px',
         lineHeight: '24px',
-        [mediaQueries.lg]: {
+        [theme.mediaQueries.lg]: {
           fontSize: '20px',
           lineHeight: '24px'
         }
-      },
-      400: {
+      }),
+      400: ({ theme }) => ({
         fontSize: '16px',
         lineHeight: '24px',
-        [mediaQueries.lg]: {
+        [theme.mediaQueries.lg]: {
           fontSize: '16px',
           lineHeight: '24px'
         }
-      },
-      300: {
+      }),
+      300: ({ theme }) => ({
         fontSize: '15px',
         lineHeight: '24px',
-        [mediaQueries.lg]: {
+        [theme.mediaQueries.lg]: {
           fontSize: '14px',
           lineHeight: '24px'
         }
-      }
+      })
     }
   }
 }
+
+export const anchor: ComponentThemeConfig = {
+  ...text,
+  baseStyle: ({ theme }: { theme: Theme }) => ({
+    color: theme.colors.turquoise[400],
+    textDecoration: 'underline',
+    [theme.mediaQueries.md]: {
+      textDecoration: 'none'
+    },
+    '& strong': {
+      color: 'inherit'
+    },
+    '&:hover, &:focus': {
+      textDecoration: 'underline'
+    }
+  })
+}
+
+export const heading: ComponentThemeConfig = text

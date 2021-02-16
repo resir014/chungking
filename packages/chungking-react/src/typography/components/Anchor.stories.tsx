@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Story, Meta } from '@storybook/react'
 
-import Anchor, { AnchorProps } from './Anchor'
+import Anchor from './Anchor'
 
 export default {
   title: 'Components/Anchor',
@@ -14,9 +14,9 @@ export default {
       }
     }
   }
-} as Meta<AnchorProps>
+} as Meta
 
-export const Example: Story<AnchorProps> = ({ ...args }) => {
+export const Example: Story = ({ ...args }) => {
   return <Anchor {...args}>Lorem ipsum dolor sit amet consectetur adipisicing elit.</Anchor>
 }
 Example.args = {
