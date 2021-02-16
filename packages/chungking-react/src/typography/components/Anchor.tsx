@@ -1,40 +1,17 @@
-import * as React from 'react'
 import styled from '@emotion/styled'
+import { shouldForwardProp } from '@spicy-ui/styled-system'
 
-import { Text, TextProps } from './Text'
-import { theme } from '../../theme'
+import { getComponentStyles } from '../../system/utils/components'
+import { allSystemProps, pseudo } from '../../system'
+import { TextProps } from './Text'
 
-export type AnchorProps = TextProps & React.AnchorHTMLAttributes<HTMLAnchorElement>
-
-const AnchorBase = styled(Text)`
-  color: ${theme.colors.turquoise[400]};
-  text-decoration: underline;
-
-  strong {
-    color: inherit;
-  }
-
-  ${theme.mediaQueries.md} {
-    text-decoration: none;
-
-    &:hover,
-    &:focus {
-      text-decoration: underline;
-    }
-  }
-`
+export type AnchorProps = TextProps
 
 /**
  * Anchor component provided as a styled component primitive.
  */
-const Anchor: React.ForwardRefRenderFunction<HTMLAnchorElement, AnchorProps> = ({ children, className, style, ...rest }, ref) => {
-  return (
-    <AnchorBase as="a" ref={ref} className={className} style={style} {...rest}>
-      {children}
-    </AnchorBase>
-  )
-}
+const Anchor = styled('a', { shouldForwardProp })<AnchorProps>(getComponentStyles('anchor'), allSystemProps, pseudo)
 
 Anchor.displayName = 'Anchor'
 
-export default React.forwardRef(Anchor)
+export default Anchor

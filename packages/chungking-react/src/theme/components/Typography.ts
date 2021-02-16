@@ -1,3 +1,4 @@
+import { Theme } from '@emotion/react'
 import { ComponentThemeConfig } from '../types'
 
 export const text: ComponentThemeConfig = {
@@ -119,3 +120,22 @@ export const paragraph: ComponentThemeConfig = {
     }
   }
 }
+
+export const anchor: ComponentThemeConfig = {
+  ...text,
+  baseStyle: ({ theme }: { theme: Theme }) => ({
+    color: theme.colors.turquoise[400],
+    textDecoration: 'underline',
+    [theme.mediaQueries.md]: {
+      textDecoration: 'none'
+    },
+    '& strong': {
+      color: 'inherit'
+    },
+    '&:hover, &:focus': {
+      textDecoration: 'underline'
+    }
+  })
+}
+
+export const heading: ComponentThemeConfig = text
