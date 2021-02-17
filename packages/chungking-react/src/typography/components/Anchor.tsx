@@ -12,6 +12,10 @@ export type AnchorProps = TextProps
  */
 const Anchor = styled('a', { shouldForwardProp })<AnchorProps>(getComponentStyles('anchor'), allSystemProps, pseudo)
 
+Anchor.defaultProps = {
+  variant: 400
+}
+
 Anchor.displayName = 'Anchor'
 
 export default Anchor

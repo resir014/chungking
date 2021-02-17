@@ -11,4 +11,8 @@ export type TextProps = TypographyBaseProps
  */
 export const Text = styled('span', { shouldForwardProp })<TypographyBaseProps>(getComponentStyles('text'), allSystemProps, pseudo, sxMixin)
 
+Text.defaultProps = {
+  variant: 400
+}
+
 Text.displayName = 'Text'
