@@ -1,7 +1,46 @@
 import { Theme } from '@emotion/react'
 import { ComponentThemeConfig } from '../types'
 
-export const text: ComponentThemeConfig = {
+export const paragraph: ComponentThemeConfig = {
+  propToScaleMap: [['variant', 'variants']],
+  scales: {
+    variants: {
+      larger: ({ theme }) => ({
+        fontSize: 'xl',
+        lineHeight: 'base',
+        [theme.mediaQueries.lg]: {
+          fontSize: '2xl'
+        }
+      }),
+      base: {
+        fontSize: 'base',
+        lineHeight: 'base'
+      },
+      smaller: {
+        fontSize: 'xs',
+        lineHeight: 'base'
+      }
+    }
+  }
+}
+
+export const link: ComponentThemeConfig = {
+  baseStyle: ({ theme }: { theme: Theme }) => ({
+    color: theme.colors.turquoise[400],
+    textDecoration: 'underline',
+    [theme.mediaQueries.md]: {
+      textDecoration: 'none'
+    },
+    '& strong': {
+      color: 'inherit'
+    },
+    '&:hover, &:focus': {
+      textDecoration: 'underline'
+    }
+  })
+}
+
+export const heading: ComponentThemeConfig = {
   propToScaleMap: [['variant', 'variants']],
   scales: {
     variants: {
@@ -88,54 +127,3 @@ export const text: ComponentThemeConfig = {
     }
   }
 }
-
-export const paragraph: ComponentThemeConfig = {
-  propToScaleMap: [['variant', 'variants']],
-  scales: {
-    variants: {
-      500: ({ theme }) => ({
-        fontSize: '18px',
-        lineHeight: '24px',
-        [theme.mediaQueries.lg]: {
-          fontSize: '20px',
-          lineHeight: '24px'
-        }
-      }),
-      400: ({ theme }) => ({
-        fontSize: '16px',
-        lineHeight: '24px',
-        [theme.mediaQueries.lg]: {
-          fontSize: '16px',
-          lineHeight: '24px'
-        }
-      }),
-      300: ({ theme }) => ({
-        fontSize: '15px',
-        lineHeight: '24px',
-        [theme.mediaQueries.lg]: {
-          fontSize: '14px',
-          lineHeight: '24px'
-        }
-      })
-    }
-  }
-}
-
-export const anchor: ComponentThemeConfig = {
-  ...text,
-  baseStyle: ({ theme }: { theme: Theme }) => ({
-    color: theme.colors.turquoise[400],
-    textDecoration: 'underline',
-    [theme.mediaQueries.md]: {
-      textDecoration: 'none'
-    },
-    '& strong': {
-      color: 'inherit'
-    },
-    '&:hover, &:focus': {
-      textDecoration: 'underline'
-    }
-  })
-}
-
-export const heading: ComponentThemeConfig = text

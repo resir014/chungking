@@ -10,7 +10,7 @@ export default {
     variant: {
       control: {
         type: 'select',
-        options: [500, 400, 300]
+        options: ['larger', 'base', 'smaller']
       }
     }
   }
@@ -26,5 +26,5 @@ export const Example: Story<Pick<ParagraphProps, 'variant'>> = ({ ...args }) => 
   )
 }
 Example.args = {
-  variant: 400
+  variant: 'base'
 }

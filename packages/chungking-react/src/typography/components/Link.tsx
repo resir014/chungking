@@ -10,8 +10,11 @@ export type AnchorProps = TextProps
 /**
  * Anchor component provided as a styled component primitive.
  */
-const Anchor = styled('a', { shouldForwardProp })<AnchorProps>(getComponentStyles('anchor'), allSystemProps, pseudo)
+const Link = styled('a', { shouldForwardProp })<AnchorProps>(getComponentStyles('link'), allSystemProps, pseudo)
 
-Anchor.displayName = 'Anchor'
+Link.displayName = 'Anchor'
 
-export default Anchor
+/** @deprecated use `Link` instead */
+export const Anchor = Link
+
+export default Link

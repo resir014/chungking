@@ -1,5 +1,4 @@
 export * from './aspect-ratio'
 export * from './box'
-export * from './chungking-provider'
 export * from './inline'
 export * from './stack'

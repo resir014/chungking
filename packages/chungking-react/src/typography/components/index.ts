@@ -1,5 +1,5 @@
-export { default as Anchor } from './Anchor'
-export * from './Anchor'
+export { default as Link } from './Link'
+export * from './Link'
 
 export { default as Heading } from './Heading'
 export * from './Heading'

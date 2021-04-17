@@ -17,3 +17,7 @@ export type ComponentThemeConfig<Props = Record<string, any>> = {
     }
   }
 }
+
+export type GlobalTheme<Props = Record<string, any>> = {
+  global?: CSSObject | ComponentThemeScaleFn<Props>
+}
