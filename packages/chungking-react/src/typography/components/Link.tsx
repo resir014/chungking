@@ -14,7 +14,7 @@ export interface LinkProps extends TextProps, React.AnchorHTMLAttributes<HTMLAnc
 /** @deprecated use `LinkProps` instead */
 export type AnchorProps = LinkProps
 
-const Root = styled('a', { shouldForwardProp })<LinkProps>(getComponentStyles('link'), allSystemProps, pseudo)
+const Root = styled('a', { shouldForwardProp })<LinkProps>(getComponentStyles('Link'), allSystemProps, pseudo)
 
 /**
  * Anchor component provided as a styled component primitive.

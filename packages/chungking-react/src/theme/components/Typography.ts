@@ -1,7 +1,7 @@
 import { Theme } from '@emotion/react'
 import { ComponentThemeConfig } from '../types'
 
-export const paragraph: ComponentThemeConfig = {
+export const Paragraph: ComponentThemeConfig = {
   propToScaleMap: [['variant', 'variants']],
   scales: {
     variants: {
@@ -21,7 +21,7 @@ export const paragraph: ComponentThemeConfig = {
   }
 }
 
-export const link: ComponentThemeConfig = {
+export const Link: ComponentThemeConfig = {
   baseStyle: ({ theme }: { theme: Theme }) => ({
     color: theme.colors.turquoise[400],
     textDecoration: ['underline', 'none'],
@@ -34,7 +34,7 @@ export const link: ComponentThemeConfig = {
   })
 }
 
-export const heading: ComponentThemeConfig = {
+export const Heading: ComponentThemeConfig = {
   propToScaleMap: [['variant', 'variants']],
   scales: {
     variants: {

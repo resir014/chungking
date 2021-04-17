@@ -13,7 +13,7 @@ export interface HeadingProps extends TypographyBaseProps {
 /**
  * Heading component provided as a styled component primitive.
  */
-const Heading = styled('h2', { shouldForwardProp })<HeadingProps>(getComponentStyles('heading'), allSystemProps, pseudo)
+const Heading = styled('h2', { shouldForwardProp })<HeadingProps>(getComponentStyles('Heading'), allSystemProps, pseudo)
 
 Heading.defaultProps = {
   variant: 'base',

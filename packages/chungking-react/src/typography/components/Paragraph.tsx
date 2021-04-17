@@ -17,7 +17,7 @@ export interface ParagraphProps extends AllSystemProps, PseudoProps, Omit<Typogr
 /**
  * Paragraph component provided as a styled component primitive.
  */
-export const Paragraph = styled('p', { shouldForwardProp })<ParagraphProps>(getComponentStyles('paragraph'), allSystemProps, pseudo)
+export const Paragraph = styled('p', { shouldForwardProp })<ParagraphProps>(getComponentStyles('Paragraph'), allSystemProps, pseudo)
 
 Paragraph.defaultProps = {
   variant: 'base'

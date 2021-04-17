@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import { shouldForwardProp } from '@spicy-ui/styled-system'
 import { allSystemProps, AllSystemProps, pseudo, PseudoProps, sxMixin, SxProps } from '../../../system'
 
-export interface BoxProps extends AllSystemProps, PseudoProps, SxProps {
+export interface BoxProps extends AllSystemProps, PseudoProps, SxProps, React.HTMLAttributes<HTMLDivElement> {
   /** Additional CSS classes to add to the component. */
   className?: string
   /** Additional CSS properties to add to the component. */
