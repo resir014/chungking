@@ -1,46 +1,30 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
+import { shouldForwardProp } from '@spicy-ui/styled-system'
+import { allSystemProps, AllSystemProps, getComponentStyles, pseudo, PseudoProps, sxMixin, SxProps } from '../../system'
+import { theme } from '../../theme'
 
-import { Box, BoxProps } from '../../layout'
-import { variant as styledSystemVariant } from '../../system'
+type ColorScheme = keyof Omit<typeof theme.colors, 'white' | 'black'>
 
-export interface BadgeProps extends BoxProps {
+export interface BadgeProps extends AllSystemProps, PseudoProps, SxProps {
   className?: string
   style?: React.CSSProperties
-  variant?: 'grey' | 'white'
+  variant?: 'outline' | 'solid' | 'subtle'
+  colorScheme?: ColorScheme
+  color?: string
   children?: React.ReactNode
 }
 
-const Root = styled(Box)<BadgeProps>`
-  padding: 0 4px;
-  font-size: 14px;
-  line-height: 20px;
-  border: 1px solid transparent;
-  border-radius: 3px;
+/**
+ * Text component provided as a styled component primitive.
+ */
+const Badge = styled('span', { shouldForwardProp })<BadgeProps>(getComponentStyles('Badge'), allSystemProps, pseudo, sxMixin)
 
-  ${styledSystemVariant({
-    variants: {
-      white: {
-        color: '#202340',
-        backgroundColor: '#d7d7db'
-      },
-      grey: {
-        color: 'grey.50',
-        backgroundColor: 'grey.800'
-      }
-    }
-  })}
-`
+Badge.displayName = 'Text'
 
-const Badge: React.ForwardRefRenderFunction<HTMLDivElement, BadgeProps> = (
-  { children, className, style, variant = 'white', ...rest },
-  ref
-) => {
-  return (
-    <Root ref={ref} as="span" display="inline-flex" alignItems="center" className={className} style={style} variant={variant} {...rest}>
-      {children}
-    </Root>
-  )
+Badge.defaultProps = {
+  variant: 'solid',
+  colorScheme: 'grey'
 }
 
-export default React.forwardRef(Badge)
+export default Badge
