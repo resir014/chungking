@@ -4,10 +4,10 @@ import { allSystemProps, pseudo } from '../../system'
 import { getComponentStyles } from '../../system/utils/components'
 import { TypographyBaseProps } from './TypographyBase'
 
-export type HeadingScale = 900 | 800 | 700 | 600 | 500 | 400 | 300 | 200 | 100
+export type HeadingVariants = 'xs' | 'sm' | 'md' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl'
 
 export interface HeadingProps extends TypographyBaseProps {
-  variant?: HeadingScale
+  variant?: HeadingVariants
 }
 
 /**
@@ -16,7 +16,7 @@ export interface HeadingProps extends TypographyBaseProps {
 const Heading = styled('h2', { shouldForwardProp })<HeadingProps>(getComponentStyles('heading'), allSystemProps, pseudo)
 
 Heading.defaultProps = {
-  variant: 800,
+  variant: 'base',
   fontWeight: 600
 }
 

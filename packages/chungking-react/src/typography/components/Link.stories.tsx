@@ -19,6 +19,12 @@ export default {
         type: 'select',
         options: Object.keys(theme.lineHeights)
       }
+    },
+    isExternal: {
+      control: {
+        type: 'radio',
+        options: [true, false]
+      }
     }
   }
 } as Meta
@@ -31,6 +37,5 @@ Example.args = {
   fontSize: 'base',
   lineHeight: 'none',
   href: 'https://www.youtube.com/watch?v=P_mQpbCSQOo',
-  target: '_blank',
-  rel: 'noopener noreferrer'
+  isExternal: false
 }
