@@ -5,7 +5,7 @@ import { AllSystemProps, allSystemProps, pseudo, PseudoProps } from '../../syste
 import { getComponentStyles } from '../../system/utils/components'
 import { TypographyBaseProps } from './TypographyBase'
 
-export type ParagraphScale = 500 | 400 | 300
+export type ParagraphScale = 'larger' | 'base' | 'smaller'
 
 export interface ParagraphProps extends AllSystemProps, PseudoProps, Omit<TypographyBaseProps, 'variant'> {
   /** Size value of the paragraph. */
@@ -17,10 +17,10 @@ export interface ParagraphProps extends AllSystemProps, PseudoProps, Omit<Typogr
 /**
  * Paragraph component provided as a styled component primitive.
  */
-export const Paragraph = styled('p', { shouldForwardProp })<TypographyBaseProps>(getComponentStyles('paragraph'), allSystemProps, pseudo)
+export const Paragraph = styled('p', { shouldForwardProp })<ParagraphProps>(getComponentStyles('Paragraph'), allSystemProps, pseudo)
 
 Paragraph.defaultProps = {
-  variant: 400
+  variant: 'base'
 }
 
 Paragraph.displayName = 'Paragraph'

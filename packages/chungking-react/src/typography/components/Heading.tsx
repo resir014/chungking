@@ -4,15 +4,19 @@ import { allSystemProps, pseudo } from '../../system'
 import { getComponentStyles } from '../../system/utils/components'
 import { TypographyBaseProps } from './TypographyBase'
 
-export type HeadingProps = TypographyBaseProps
+export type HeadingVariants = 'xs' | 'sm' | 'md' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl'
+
+export interface HeadingProps extends TypographyBaseProps {
+  variant?: HeadingVariants
+}
 
 /**
  * Heading component provided as a styled component primitive.
  */
-const Heading = styled('h2', { shouldForwardProp })<TypographyBaseProps>(getComponentStyles('heading'), allSystemProps, pseudo)
+const Heading = styled('h2', { shouldForwardProp })<HeadingProps>(getComponentStyles('Heading'), allSystemProps, pseudo)
 
 Heading.defaultProps = {
-  variant: 800,
+  variant: 'base',
   fontWeight: 600
 }
 

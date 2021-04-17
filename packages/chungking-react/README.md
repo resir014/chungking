@@ -11,6 +11,15 @@ $ yarn add @resir014/chungking-react @emotion/react @emotion/styled
 $ npm i @resir014/chungking-react @emotion/react @emotion/styled
 ```
 
+You will also need the [Feather icons set](https://feathericons.com/), run this command to install them:
+
+```bash
+# yarn
+$ yarn add react-feather
+# npm
+$ npm i react-feather
+```
+
 ## Usage
 
 First, wrap your entire app inside `ChungkingProvider`. This will apply the Emotion theme provider, as well as style resets.

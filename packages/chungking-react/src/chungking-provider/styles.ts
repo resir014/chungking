@@ -1,6 +1,6 @@
 import { css } from '@emotion/react'
 import { transparentize } from 'polished'
-import { Theme } from '../../theme'
+import { Theme } from '../theme'
 
 const styles = (theme: Theme) => css`
   html {
@@ -81,13 +81,6 @@ const styles = (theme: Theme) => css`
   code,
   pre {
     font-family: ${theme.fonts.monospace};
-  }
-
-  #___gatsby,
-  #__next {
-    width: 100%;
-    height: 100%;
-    min-height: 100vh;
   }
 
   table {
