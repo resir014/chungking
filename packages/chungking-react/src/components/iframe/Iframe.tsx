@@ -1,10 +1,13 @@
 import * as React from 'react'
-import { Box } from '../../layout'
+import { Box, BoxProps } from '../../layout'
+import { useComponentStyles } from '../../system'
 
-export type IframeProps = JSX.IntrinsicElements['iframe']
+export type IframeProps = BoxProps & JSX.IntrinsicElements['iframe']
 
-const Iframe: React.ForwardRefRenderFunction<HTMLIFrameElement, IframeProps> = ({ title, ...rest }, ref) => {
-  return <Box ref={ref} as="iframe" display="block" verticalAlign="middle" borderWidth={0} borderStyle="solid" title={title} {...rest} />
-}
+const Iframe = React.forwardRef<HTMLIFrameElement, IframeProps>(({ title, sx, ...rest }, ref) => {
+  const styles = useComponentStyles('Iframe')
 
-export default React.forwardRef(Iframe)
+  return <Box ref={ref} as="iframe" title={title} sx={{ ...styles, ...sx }} {...rest} />
+})
+
+export default Iframe
