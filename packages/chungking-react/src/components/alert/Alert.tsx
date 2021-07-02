@@ -8,6 +8,11 @@ export interface AlertProps extends BoxProps {
   children?: React.ReactNode
 }
 
+/**
+ * @deprecated use `AlertProps` instead
+ */
+export type MessageBoxProps = AlertProps
+
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(({ className, children, variant = 'default', sx, ...rest }, ref) => {
   const styles = useComponentStyles('Alert', { variant })
 
@@ -17,5 +22,10 @@ const Alert = React.forwardRef<HTMLDivElement, AlertProps>(({ className, childre
     </Box>
   )
 })
+
+/**
+ * @deprecated use `Alert` instead
+ */
+export const MessageBox = Alert
 
 export default Alert
