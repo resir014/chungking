@@ -1,11 +1,11 @@
 import React from 'react'
 import { Story, Meta } from '@storybook/react'
 
-import MessageBox, { MessageBoxProps } from './MessageBox'
+import Alert, { AlertProps } from './Alert'
 
 export default {
-  title: 'Components/MessageBox',
-  component: MessageBox,
+  title: 'Components/Alert',
+  component: Alert,
   argTypes: {
     variant: {
       control: {
@@ -17,9 +17,9 @@ export default {
       control: 'text'
     }
   }
-} as Meta<MessageBoxProps>
+} as Meta<AlertProps>
 
-const Template: Story<MessageBoxProps> = (args) => <MessageBox {...args} />
+const Template: Story<AlertProps> = (args) => <Alert {...args} />
 
 export const Example = Template.bind({})
 Example.args = {
