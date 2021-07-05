@@ -1,22 +1,25 @@
+const grey = {
+  50: '#e7e7e8',
+  100: '#cfcfd1',
+  200: '#b8b8ba',
+  300: '#a1a1a5',
+  400: '#8b8b8f',
+  500: '#76757a',
+  600: '#616166',
+  700: '#4d4d53',
+  800: '#393940',
+  900: '#27272e'
+}
+
 module.exports = {
   config: {
     theme: {
-      screens: {},
       colors: {
         white: '#ffffff',
         black: '#16161d',
-        grey: {
-          50: '#e7e7e8',
-          100: '#cfcfd1',
-          200: '#b8b8ba',
-          300: '#a1a1a5',
-          400: '#8b8b8f',
-          500: '#76757a',
-          600: '#616166',
-          700: '#4d4d53',
-          800: '#393940',
-          900: '#27272e'
-        },
+        grey,
+        // Alias for the `grey` colors as well as replacing the default Tailwind CSS grays
+        gray: grey,
         red: {
           50: '#fde7e7',
           100: '#fab7b7',
