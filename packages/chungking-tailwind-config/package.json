@@ -3,15 +3,21 @@
   "version": "0.0.0",
   "description": "TailwindCSS configuration for the Chungking design system.",
   "main": "chungking-tailwind-config.js",
-  "files": [
-    "chungking-tailwind-config.js"
-  ],
   "repository": "https://github.com/resir014/chungking.git",
   "author": "Resi Respati <resir014@gmail.com>",
   "license": "MIT",
+  "files": [
+    "chungking-tailwind-config.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "lint": "eslint \"chungking-tailwind-config.js\"",
     "validate": "yarn lint"
+  },
+  "dependencies": {
+    "@resir014/chungking-core": "0.0.0"
   },
   "peerDependencies": {
     "tailwindcss": "^2.0.0"
