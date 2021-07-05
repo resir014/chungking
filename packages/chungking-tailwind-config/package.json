@@ -9,6 +9,10 @@
   "repository": "https://github.com/resir014/chungking.git",
   "author": "Resi Respati <resir014@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"chungking-tailwind-config.js\"",
+    "validate": "yarn lint"
+  },
   "peerDependencies": {
     "tailwindcss": "^2.0.0"
   },
