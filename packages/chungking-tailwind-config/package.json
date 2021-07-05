@@ -1,0 +1,18 @@
+{
+  "name": "@resir014/chungking-tailwind-config",
+  "version": "0.0.0",
+  "description": "TailwindCSS configuration for the Chungking design system.",
+  "main": "chungking-tailwind-config.js",
+  "files": [
+    "chungking-tailwind-config.js"
+  ],
+  "repository": "https://github.com/resir014/chungking.git",
+  "author": "Resi Respati <resir014@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "tailwindcss": "^2.0.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^2.2.4"
+  }
+}
