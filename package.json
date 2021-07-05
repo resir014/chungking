@@ -36,14 +36,14 @@
     "typescript": "^4.1.2"
   },
   "scripts": {
-    "build": "yarn workspaces run build",
-    "clean": "yarn workspaces run clean",
-    "lint": "yarn workspaces run lint",
+    "build": "lerna run build",
+    "clean": "lerna run clean",
+    "lint": "lerna run lint",
     "prepublish": "yarn clean && yarn build",
     "storybook": "yarn workspace @resir014/chungking-react run storybook",
-    "test": "yarn workspaces run test",
-    "test:coverage": "yarn workspaces run test:coverage",
-    "validate": "yarn workspaces run validate"
+    "test": "lerna run test",
+    "test:coverage": "lerna run test:coverage",
+    "validate": "lerna run validate"
   },
   "husky": {
     "hooks": {

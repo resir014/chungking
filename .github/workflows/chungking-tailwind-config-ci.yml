@@ -1,0 +1,31 @@
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'packages/chungking-tailwind-config/**'
+      - '.github/workflows/chungking-tailwind-config-ci.yml'
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - 'packages/chungking-tailwind-config/**'
+      - '.github/workflows/chungking-tailwind-config-ci.yml'
+
+name: chungking-tailwind-config
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/cache@v1
+        id: restore-build
+        with:
+          path: '.'
+          key: ${{ github.sha }}
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - run: yarn workspace @resir014/chungking-tailwind-config run validate
+        env:
+          CI: true
