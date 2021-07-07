@@ -1,4 +1,4 @@
-const { colors, shadows } = require('@resir014/chungking-core')
+const { colors, fonts, shadows } = require('@resir014/chungking-core')
 
 module.exports = {
   config: {
@@ -21,6 +21,10 @@ module.exports = {
       boxShadow: {
         single: shadows.single,
         double: shadows.double
+      },
+      fontFamily: {
+        sans: fonts.sansSerif,
+        mono: fonts.monospace
       }
     }
   }
