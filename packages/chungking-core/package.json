@@ -1,0 +1,28 @@
+{
+  "name": "@resir014/chungking-core",
+  "version": "0.0.0",
+  "description": "Core theme variables for the Chungking Design System.",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "exports": "./dist/foo.modern.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/resir014/chungking.git",
+  "author": "Resi Respati <resir014@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "microbundle",
+    "clean": "rimraf dist",
+    "dev": "microbundle watch",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "prepublishOnly": "yarn clean && yarn build",
+    "type-check": "tsc",
+    "validate": "yarn lint && yarn type-check"
+  }
+}
