@@ -63,23 +63,3 @@ jobs:
       - run: yarn workspace @resir014/chungking-react run test:coverage
         env:
           CI: true
-
-  chromatic:
-    name: Chromatic
-    runs-on: ubuntu-latest
-    needs:
-      - validate
-      - run-tests
-    steps:
-      - uses: actions/cache@v1
-        id: restore-build
-        with:
-          path: '.'
-          key: ${{ github.sha }}
-      - uses: actions/setup-node@v1
-        with:
-          node-version: '12'
-      - run: yarn workspace @resir014/chungking-react run chromatic --project-token=$CHROMATIC_PROJECT_TOKEN --exit-zero-on-changes
-        env:
-          CI: true
-          CHROMATIC_PROJECT_TOKEN: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
