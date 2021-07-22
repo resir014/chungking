@@ -1,6 +1,6 @@
 {
   "name": "@resir014/chungking-tailwind-config",
-  "version": "0.0.0",
+  "version": "0.0.1-canary.0",
   "description": "TailwindCSS configuration for the Chungking design system.",
   "main": "chungking-tailwind-config.js",
   "repository": "https://github.com/resir014/chungking.git",
@@ -17,7 +17,7 @@
     "validate": "yarn lint"
   },
   "dependencies": {
-    "@resir014/chungking-core": "0.0.0"
+    "@resir014/chungking-core": "^0.0.1-canary.0"
   },
   "peerDependencies": {
     "tailwindcss": "^2.0.0"
