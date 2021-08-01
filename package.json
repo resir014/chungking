@@ -17,6 +17,7 @@
     "@commitlint/config-conventional": "^11.0.0",
     "@types/jest": "^26.0.24",
     "@types/react": "^17.0.14",
+    "caniuse-lite": "^1.0.30001248",
     "eslint": "^7.19.0",
     "eslint-config-blvd": "^1.1.0",
     "eslint-config-prettier": "^7.2.0",
