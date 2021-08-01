@@ -11,13 +11,19 @@ export default {
     fontSize: {
       control: {
         type: 'select',
-        options: Object.keys(theme.fontSizes)
+        options: [undefined, ...Object.keys(theme.fontSizes)]
       }
     },
     lineHeight: {
       control: {
         type: 'select',
-        options: Object.keys(theme.lineHeights)
+        options: [undefined, ...Object.keys(theme.lineHeights)]
+      }
+    },
+    variant: {
+      control: {
+        type: 'select',
+        options: [undefined, 'xs', 'sm', 'md', 'base', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', '7xl', '8xl', '9xl']
       }
     }
   }
@@ -27,11 +33,6 @@ export const Example: Story<TextProps> = (args) => {
   return <Text {...args}>I am a text!</Text>
 }
 
-Example.args = {
-  fontSize: 'base',
-  lineHeight: 'none'
-}
-
 export const PseudoProps: Story<TextProps> = (args) => {
   return (
     <Text textDecoration="none" _hover={{ color: 'green.500', textDecoration: 'underline' }} {...args}>
@@ -39,4 +40,3 @@ export const PseudoProps: Story<TextProps> = (args) => {
     </Text>
   )
 }
-PseudoProps.args = Example.args

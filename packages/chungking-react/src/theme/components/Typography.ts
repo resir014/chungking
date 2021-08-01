@@ -7,15 +7,15 @@ export const Paragraph: ComponentThemeConfig = {
     variants: {
       larger: {
         fontSize: ['xl', null, '2xl'],
-        lineHeight: [1.2, null, 1.5]
+        lineHeight: ['xl', null, '2xl']
       },
       base: {
         fontSize: 'base',
-        lineHeight: 1.5
+        lineHeight: 'base'
       },
       smaller: {
         fontSize: 'xs',
-        lineHeight: 2
+        lineHeight: 'base'
       }
     }
   }
@@ -34,34 +34,66 @@ export const Link: ComponentThemeConfig = {
   })
 }
 
-export const Heading: ComponentThemeConfig = {
+export const Text: ComponentThemeConfig = {
   propToScaleMap: [['variant', 'variants']],
   scales: {
     variants: {
+      '9xl': {
+        fontSize: '9xl',
+        lineHeight: '9xl'
+      },
+      '8xl': {
+        fontSize: '8xl',
+        lineHeight: '8xl'
+      },
+      '7xl': {
+        fontSize: '7xl',
+        lineHeight: '7xl'
+      },
+      '6xl': {
+        fontSize: '6xl',
+        lineHeight: '6xl'
+      },
+      '5xl': {
+        fontSize: '5xl',
+        lineHeight: '5xl'
+      },
       '4xl': {
-        fontSize: ['6xl', null, '7xl'],
-        lineHeight: 1
+        fontSize: '4xl',
+        lineHeight: '4xl'
       },
       '3xl': {
-        fontSize: ['5xl', null, '6xl'],
-        lineHeight: 1
+        fontSize: '3xl',
+        lineHeight: '3xl'
       },
       '2xl': {
-        fontSize: ['4xl', null, '5xl'],
-        lineHeight: [1.2, null, 1]
+        fontSize: '2xl',
+        lineHeight: '2xl'
       },
       xl: {
-        fontSize: ['3xl', null, '4xl'],
-        lineHeight: [1.33, null, 1.2]
+        fontSize: 'xl',
+        lineHeight: 'xl'
       },
       lg: {
-        fontSize: ['2xl', null, '3xl'],
-        lineHeight: [1.33, null, 1.2]
+        fontSize: 'lg',
+        lineHeight: 'lg'
       },
-      base: { fontSize: 'xl', lineHeight: 1.2 },
-      md: { fontSize: 'xl', lineHeight: 1.2 },
-      sm: { fontSize: 'md', lineHeight: 1.2 },
-      xs: { fontSize: 'sm', lineHeight: 1.2 }
+      md: {
+        fontSize: 'md',
+        lineHeight: 'md'
+      },
+      base: {
+        fontSize: 'md',
+        lineHeight: 'md'
+      },
+      sm: {
+        fontSize: 'sm',
+        lineHeight: 'sm'
+      },
+      xs: {
+        fontSize: 'xs',
+        lineHeight: 'xs'
+      }
     }
   }
 }

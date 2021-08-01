@@ -2,18 +2,17 @@ import styled from '@emotion/styled'
 import { shouldForwardProp } from '@spicy-ui/styled-system'
 import { allSystemProps, pseudo } from '../../system'
 import { getComponentStyles } from '../../system/utils/components'
+import { TextVariants } from './Text'
 import { TypographyBaseProps } from './TypographyBase'
 
-export type HeadingVariants = 'xs' | 'sm' | 'md' | 'base' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl'
-
 export interface HeadingProps extends TypographyBaseProps {
-  variant?: HeadingVariants
+  variant?: TextVariants
 }
 
 /**
  * Heading component provided as a styled component primitive.
  */
-const Heading = styled('h2', { shouldForwardProp })<HeadingProps>(getComponentStyles('Heading'), allSystemProps, pseudo)
+const Heading = styled('h2', { shouldForwardProp })<HeadingProps>(getComponentStyles('Text'), allSystemProps, pseudo)
 
 Heading.defaultProps = {
   variant: 'base',
