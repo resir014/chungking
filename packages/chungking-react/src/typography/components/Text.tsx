@@ -15,6 +15,6 @@ export interface TextProps extends TypographyBaseProps {
 /**
  * Text component provided as a styled component primitive.
  */
-export const Text = styled('span', { shouldForwardProp })<TypographyBaseProps>(getComponentStyles('Text'), allSystemProps, pseudo, sxMixin)
+export const Text = styled('span', { shouldForwardProp })<TextProps>(getComponentStyles('Text'), allSystemProps, pseudo, sxMixin)
 
 Text.displayName = 'Text'
