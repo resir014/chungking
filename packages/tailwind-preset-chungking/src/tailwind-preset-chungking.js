@@ -5,19 +5,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        white: colors.white,
-        black: colors.black,
-        grey: colors.grey,
-        // Alias for the `grey` colors as well as replacing the default Tailwind CSS grays
-        gray: colors.grey,
-        red: colors.red,
-        orange: colors.orange,
-        green: colors.green,
-        turquoise: colors.turquoise,
-        blue: colors.blue,
-        ultramarine: colors.ultramarine,
-        purple: colors.purple,
-        magenta: colors.magenta
+        'chungking-white': colors.white,
+        'chungking-black': colors.black,
+        'chungking-grey': colors.grey,
+        'chungking-red': colors.red,
+        'chungking-orange': colors.orange,
+        'chungking-green': colors.green,
+        'chungking-turquoise': colors.turquoise,
+        'chungking-blue': colors.blue,
+        'chungking-ultramarine': colors.ultramarine,
+        'chungking-purple': colors.purple,
+        'chungking-magenta': colors.magenta
       },
       boxShadow: {
         single: shadows.single,
