@@ -1,0 +1,9 @@
+{
+  "extends": "../../tsconfig.project.json",
+  "compilerOptions": {
+    "allowJs": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "typeRoots": ["./@types", "./node_modules/@types", "../../@types", "../../node_modules/@types"]
+  }
+}

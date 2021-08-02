@@ -30,6 +30,7 @@
     "tailwindcss": "^2.0.0"
   },
   "devDependencies": {
+    "@types/tailwindcss": "^2.2.1",
     "tailwindcss": "^2.2.4"
   }
 }
