@@ -5,7 +5,7 @@
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
-  "exports": "./dist/foo.modern.js",
+  "exports": "./dist/index.modern.js",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/resir014/chungking.git",
   "author": "Resi Respati <resir014@gmail.com>",
