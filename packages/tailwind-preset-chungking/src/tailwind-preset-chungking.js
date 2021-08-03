@@ -1,4 +1,4 @@
-const { colors, fonts, shadows } = require('@resir014/chungking-core')
+const { colors, fonts, shadows } = require('@resir014/chungking-core').default
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
@@ -7,15 +7,42 @@ module.exports = {
       colors: {
         'chungking-white': colors.white,
         'chungking-black': colors.black,
-        'chungking-grey': colors.grey,
-        'chungking-red': colors.red,
-        'chungking-orange': colors.orange,
-        'chungking-green': colors.green,
-        'chungking-turquoise': colors.turquoise,
-        'chungking-blue': colors.blue,
-        'chungking-ultramarine': colors.ultramarine,
-        'chungking-purple': colors.purple,
-        'chungking-magenta': colors.magenta
+        'chungking-grey': {
+          DEFAULT: colors.grey['500'],
+          ...colors.grey
+        },
+        'chungking-red': {
+          DEFAULT: colors.red['500'],
+          ...colors.red
+        },
+        'chungking-orange': {
+          DEFAULT: colors.orange['500'],
+          ...colors.orange
+        },
+        'chungking-green': {
+          DEFAULT: colors.green['500'],
+          ...colors.green
+        },
+        'chungking-turquoise': {
+          DEFAULT: colors.turquoise['500'],
+          ...colors.turquoise
+        },
+        'chungking-blue': {
+          DEFAULT: colors.blue['500'],
+          ...colors.blue
+        },
+        'chungking-ultramarine': {
+          DEFAULT: colors.ultramarine['500'],
+          ...colors.ultramarine
+        },
+        'chungking-purple': {
+          DEFAULT: colors.purple['500'],
+          ...colors.purple
+        },
+        'chungking-magenta': {
+          DEFAULT: colors.magenta['500'],
+          ...colors.magenta
+        }
       },
       boxShadow: {
         single: shadows.single,
