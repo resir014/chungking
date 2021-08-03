@@ -1,4 +1,4 @@
-const { colors, fonts, shadows } = require('@resir014/chungking-core').default
+const { colors, fonts, shadows } = require('@resir014/chungking-core')
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
