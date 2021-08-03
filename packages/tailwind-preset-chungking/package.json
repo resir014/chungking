@@ -1,6 +1,6 @@
 {
   "name": "@resir014/tailwind-preset-chungking",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TailwindCSS preset for the Chungking design system.",
   "source": "src/tailwind-preset-chungking.js",
   "main": "dist/tailwind-preset-chungking.js",
