@@ -2,7 +2,7 @@
   "name": "@resir014/tailwind-preset-chungking",
   "version": "0.0.1-canary.1",
   "description": "TailwindCSS preset for the Chungking design system.",
-  "source": "src/tailwind-preset-chungking.ts",
+  "source": "src/tailwind-preset-chungking.js",
   "main": "dist/tailwind-preset-chungking.js",
   "module": "dist/tailwind-preset-chungking.module.js",
   "unpkg": "dist/tailwind-preset-chungking.umd.js",
