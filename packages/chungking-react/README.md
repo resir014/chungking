@@ -53,7 +53,7 @@ export default function Component() {
 
 ## Developing Locally
 
-From the root `stereo` directory, install the project dependencies.
+Install the project dependencies.
 
 ```sh-session
 $ yarn
@@ -62,7 +62,6 @@ $ yarn
 To start developing components, you have to run the Storybook server.
 
 ```sh-session
-$ cd packages/chungking-react
 $ yarn storybook
 info Storybook started on => http://localhost:6006/
 ```
