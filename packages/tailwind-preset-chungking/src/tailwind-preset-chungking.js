@@ -1,4 +1,5 @@
-const { colors, fonts, shadows } = require('@resir014/chungking-core')
+const { colors, shadows } = require('@resir014/chungking-core')
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
@@ -49,8 +50,8 @@ module.exports = {
         double: shadows.double
       },
       fontFamily: {
-        sans: fonts.sansSerif,
-        mono: fonts.monospace
+        sans: ['Inter', ...defaultTheme.fontFamily.sans],
+        mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono]
       }
     }
   }
