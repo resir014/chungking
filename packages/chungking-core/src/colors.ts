@@ -8,7 +8,7 @@ const grey = {
   '600': '#53565d',
   '700': '#3f4045',
   '800': '#2b2b30',
-  '900': '#16161d'
+  '900': '#191a1e'
 }
 
 const red = {
@@ -117,7 +117,7 @@ const magenta = {
 
 const colors = {
   white: '#ffffff',
-  black: '#0b0b0f',
+  black: '#0d0d0f',
   grey,
   red,
   orange,
