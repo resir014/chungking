@@ -1,4 +1,3 @@
-import { transparentize } from 'polished'
 import { ComponentThemeConfig } from '../../system'
 
 export const Paragraph: ComponentThemeConfig = {
@@ -30,9 +29,6 @@ export const Link: ComponentThemeConfig = {
     },
     '&:hover, &:focus': {
       textDecoration: 'underline'
-    },
-    '&:focus': {
-      boxShadow: `${transparentize(0.4, theme.colors.green[500])} 0 0 0 3px`
     }
   })
 }
