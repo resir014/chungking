@@ -1,4 +1,4 @@
-import { GlobalTheme } from '../system/types'
+import { GlobalTheme } from '../system'
 
 const styles: GlobalTheme = {
   global: {
