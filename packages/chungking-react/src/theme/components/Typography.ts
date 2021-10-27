@@ -1,5 +1,5 @@
 import { Theme } from '@emotion/react'
-import { ComponentThemeConfig } from '../types'
+import { ComponentThemeConfig } from '../../system'
 
 export const Paragraph: ComponentThemeConfig = {
   propToScaleMap: [['variant', 'variants']],

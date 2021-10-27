@@ -1,5 +1,5 @@
 import { transparentize } from 'polished'
-import { ComponentThemeConfig } from '../types'
+import { ComponentThemeConfig } from '../../system'
 
 const Badge: ComponentThemeConfig = {
   propToScaleMap: [['variant', 'variants']],
