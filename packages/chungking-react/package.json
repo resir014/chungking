@@ -52,7 +52,6 @@
     "@storybook/react": "6.3.6",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.3",
-    "babel-loader": "^8.2.2",
-    "react-feather": "^2.0.9"
+    "babel-loader": "^8.2.2"
   }
 }
