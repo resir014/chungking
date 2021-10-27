@@ -5,7 +5,7 @@ import deepmerge from 'deepmerge'
 import * as React from 'react'
 import isEqual from 'react-fast-compare'
 import { useTheme } from '@emotion/react'
-import { ComponentThemeConfig } from '../../theme'
+import { ComponentThemeConfig } from '../types'
 import { runIfFn } from '../../utils'
 
 function getStyles(config?: ComponentThemeConfig, props: any = {}) {

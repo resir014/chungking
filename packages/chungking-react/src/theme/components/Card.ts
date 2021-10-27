@@ -1,4 +1,4 @@
-import { ComponentThemeConfig } from '../types'
+import { ComponentThemeConfig } from '../../system'
 
 const Card: ComponentThemeConfig = {
   propToScaleMap: [['elevation', 'elevations']],
