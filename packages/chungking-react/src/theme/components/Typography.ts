@@ -1,4 +1,4 @@
-import { Theme } from '@emotion/react'
+import { transparentize } from 'polished'
 import { ComponentThemeConfig } from '../../system'
 
 export const Paragraph: ComponentThemeConfig = {
@@ -22,7 +22,7 @@ export const Paragraph: ComponentThemeConfig = {
 }
 
 export const Link: ComponentThemeConfig = {
-  baseStyle: ({ theme }: { theme: Theme }) => ({
+  baseStyle: ({ theme }) => ({
     color: theme.colors.turquoise[400],
     textDecoration: ['underline', 'none'],
     '& strong': {
@@ -30,6 +30,9 @@ export const Link: ComponentThemeConfig = {
     },
     '&:hover, &:focus': {
       textDecoration: 'underline'
+    },
+    '&:focus': {
+      boxShadow: `${transparentize(0.4, theme.colors.green[500])} 0 0 0 3px`
     }
   })
 }
