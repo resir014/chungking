@@ -13,7 +13,9 @@ module.exports = {
         ...config.resolve,
         alias: {
           ...config.resolve.alias,
+          // TODO: Remove once Storybook supports Emotion 11.
           '@emotion/core': toPath('../../node_modules/@emotion/react'),
+          '@emotion/styled': toPath('../../node_modules/@emotion/styled'),
           'emotion-theming': toPath('../../node_modules/@emotion/react')
         }
       }
