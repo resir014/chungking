@@ -8,7 +8,7 @@ const styles: GlobalTheme = {
       minHeight: '100%',
       margin: 0,
       color: 'grey.50',
-      backgroundColor: 'black',
+      backgroundColor: 'grey.900',
       fontFamily: 'sansSerif',
       lineHeight: 'base'
     },
