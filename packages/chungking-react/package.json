@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "@chakra-ui/css-reset": "^1.0.0",
+    "@resir014/chungking-core": "^0.1.2-canary.1",
     "@spicy-ui/styled-system": "^0.0.1-alpha.3",
     "clsx": "^1.1.1",
     "csstype": "^3.0.8",
