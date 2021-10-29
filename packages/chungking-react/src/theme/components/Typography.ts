@@ -1,5 +1,4 @@
-import { Theme } from '@emotion/react'
-import { ComponentThemeConfig } from '../types'
+import { ComponentThemeConfig } from '../../system'
 
 export const Paragraph: ComponentThemeConfig = {
   propToScaleMap: [['variant', 'variants']],
@@ -22,7 +21,7 @@ export const Paragraph: ComponentThemeConfig = {
 }
 
 export const Link: ComponentThemeConfig = {
-  baseStyle: ({ theme }: { theme: Theme }) => ({
+  baseStyle: ({ theme }) => ({
     color: theme.colors.turquoise[400],
     textDecoration: ['underline', 'none'],
     '& strong': {

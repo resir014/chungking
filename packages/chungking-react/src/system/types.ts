@@ -1,9 +1,9 @@
-import { RequiredTheme } from '@spicy-ui/styled-system'
+import type { Theme } from '@emotion/react'
 
 // eslint-disable-next-line @typescript-eslint/ban-types
 type CSSObject = object // TODO
 
-export type ComponentThemeScaleFn<P> = (props: P & { theme: RequiredTheme }) => CSSObject
+export type ComponentThemeScaleFn<P> = (props: P & { theme: Theme }) => CSSObject
 
 // FIXME was SystemStyleObject
 export type ComponentThemeScale<P> = CSSObject | ComponentThemeScaleFn<P>

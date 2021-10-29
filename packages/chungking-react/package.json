@@ -1,6 +1,6 @@
 {
   "name": "@resir014/chungking-react",
-  "version": "0.3.1",
+  "version": "0.3.2-canary.1",
   "description": "@resir014's personal design system.",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -25,9 +25,7 @@
     "test": "jest --env=jsdom",
     "test:coverage": "jest --env=jsdom --coverage",
     "type-check": "tsc",
-    "validate": "yarn lint && yarn type-check",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "validate": "yarn lint && yarn type-check"
   },
   "peerDependencies": {
     "@emotion/react": "^11.0.0",
@@ -39,6 +37,7 @@
   },
   "dependencies": {
     "@chakra-ui/css-reset": "^1.0.0",
+    "@resir014/chungking-core": "^0.1.2-canary.1",
     "@resir014/tailwind-preset-chungking": "^0.1.4-canary.0",
     "@spicy-ui/styled-system": "^0.0.1-alpha.3",
     "clsx": "^1.1.1",
@@ -48,18 +47,7 @@
     "react-fast-compare": "^3.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@emotion/react": "^11.4.0",
-    "@emotion/styled": "^11.3.0",
-    "@storybook/addon-essentials": "6.3.6",
-    "@storybook/addon-links": "6.3.6",
-    "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/react": "6.3.6",
     "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.3",
-    "babel-loader": "^8.2.2",
-    "postcss": "^8.3.9",
-    "react-feather": "^2.0.9",
-    "tailwindcss": "^2.2.16"
+    "@testing-library/react": "^11.2.3"
   }
 }

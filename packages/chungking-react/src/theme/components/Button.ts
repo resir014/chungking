@@ -1,4 +1,5 @@
-import { ComponentThemeConfig } from '../types'
+import { transparentize } from 'polished'
+import { ComponentThemeConfig } from '../../system'
 
 const buttonHoverFocusStyles = {
   outline: 'none',
@@ -10,7 +11,7 @@ const Button: ComponentThemeConfig = {
     ['variant', 'variants'],
     ['size', 'sizes']
   ],
-  baseStyle: () => ({
+  baseStyle: ({ theme }) => ({
     display: 'inline-flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -28,7 +29,10 @@ const Button: ComponentThemeConfig = {
       opacity: 0.5
     },
     _hover: buttonHoverFocusStyles,
-    _focus: buttonHoverFocusStyles,
+    _focus: {
+      ...buttonHoverFocusStyles,
+      boxShadow: `${transparentize(0.4, theme.colors.green[500])} 0 0 0 3px`
+    },
     _active: buttonHoverFocusStyles
   }),
   scales: {

@@ -1,6 +1,6 @@
 import { Theme } from '@emotion/react'
 import { transparentize } from 'polished'
-import { ComponentThemeConfig } from '../types'
+import { ComponentThemeConfig } from '../../system'
 
 const Alert: ComponentThemeConfig = {
   propToScaleMap: [['variant', 'variants']],

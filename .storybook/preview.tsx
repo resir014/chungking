@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { themes } from '@storybook/theming'
-import { ChungkingProvider } from '../src'
+import { ChungkingProvider } from '@resir014/chungking-react'
 
 import '../src/styles.css'
 

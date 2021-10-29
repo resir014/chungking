@@ -12,11 +12,25 @@
       "packages/*"
     ]
   },
+  "dependencies": {
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-feather": "^2.0.9"
+  },
   "devDependencies": {
+    "@babel/core": "^7.12.9",
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@storybook/addon-essentials": "6.3.6",
+    "@storybook/addon-links": "6.3.6",
+    "@storybook/addon-postcss": "^2.0.0",
+    "@storybook/react": "6.3.6",
     "@types/jest": "^26.0.24",
     "@types/react": "^17.0.14",
+    "@types/react-dom": "^17.0.10",
+    "babel-loader": "^8.2.2",
     "caniuse-lite": "^1.0.30001248",
     "eslint": "^7.19.0",
     "eslint-config-blvd": "^1.1.0",
@@ -29,8 +43,6 @@
     "lint-staged": "^10.5.3",
     "microbundle": "^0.13.0",
     "prettier": "^2.2.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "react-is": "^17.0.2",
     "rimraf": "^3.0.2",
     "stylelint": "^13.13.1",
@@ -40,10 +52,11 @@
   },
   "scripts": {
     "build": "lerna run build",
+    "build-storybook": "build-storybook",
     "clean": "lerna run clean",
     "lint": "lerna run lint",
     "prepublish": "yarn clean && yarn build",
-    "storybook": "yarn workspace @resir014/chungking-react run storybook",
+    "storybook": "start-storybook -p 6006",
     "test": "lerna run test",
     "test:coverage": "lerna run test:coverage",
     "validate": "lerna run validate"

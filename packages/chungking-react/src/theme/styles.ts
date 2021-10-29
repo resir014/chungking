@@ -1,13 +1,14 @@
-import { GlobalTheme } from './types'
+import { transparentize } from 'polished'
+import { GlobalTheme } from '../system'
 
 const styles: GlobalTheme = {
-  global: {
+  global: ({ theme }) => ({
     body: {
       position: 'relative',
       minHeight: '100%',
       margin: 0,
       color: 'grey.50',
-      backgroundColor: 'black',
+      backgroundColor: 'grey.900',
       fontFamily: 'sansSerif',
       lineHeight: 'base'
     },
@@ -18,12 +19,16 @@ const styles: GlobalTheme = {
       borderColor: 'grey.200',
       wordWrap: 'break-word'
     },
+    'a:focus': {
+      outline: 'none',
+      boxShadow: `${transparentize(0.4, theme.colors.green[500])} 0 0 0 3px`
+    },
     '#___gatsby, #__next': {
       width: '100%',
       height: '100%',
       minHeight: '100vh'
     }
-  }
+  })
 }
 
 export default styles
