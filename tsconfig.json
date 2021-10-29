@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.project.json",
+  "include": ["packages"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*"],
+      "@resir014/chungking-core": ["./packages/chungking-core/src"],
+      "@resir014/chungking-react": ["./packages/chungking-react/src"],
+      "@resir014/tailwind-preset-chungking": ["./packages/tailwind-preset-chungking/src"]
+    }
+  }
+}
