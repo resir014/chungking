@@ -3,6 +3,7 @@ module.exports = {
   extends: ['blvd/react', 'prettier', 'prettier/@typescript-eslint', 'prettier/react', 'plugin:prettier/recommended'],
   plugins: ['prettier'],
   rules: {
+    'import/no-extraneous-dependencies': 'off',
     'import/no-unresolved': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
     'react/jsx-props-no-spreading': 'off',
