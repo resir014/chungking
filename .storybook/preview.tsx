@@ -2,7 +2,7 @@ import * as React from 'react'
 import { themes } from '@storybook/theming'
 import { ChungkingProvider } from '@resir014/chungking-react'
 
-import '../src/styles.css'
+import '@resir014/chungking-react/styles.css'
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
