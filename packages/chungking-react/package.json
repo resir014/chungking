@@ -22,8 +22,8 @@
     "dev": "microbundle watch --jsx React.createElement",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "prepublishOnly": "yarn clean && yarn build",
-    "test": "jest --env=jsdom",
-    "test:coverage": "jest --env=jsdom --coverage",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
     "type-check": "tsc",
     "validate": "yarn lint && yarn type-check"
   },
