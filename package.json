@@ -17,7 +17,8 @@
     "@emotion/styled": "^11.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-feather": "^2.0.9"
+    "react-feather": "^2.0.9",
+    "tailwindcss": "^2.2.4"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -29,6 +30,7 @@
     "@types/jest": "^27.0.2",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
+    "@types/tailwindcss": "^2.2.1",
     "babel-loader": "^8.2.3",
     "caniuse-lite": "^1.0.30001272",
     "eslint": "^7.19.0",
