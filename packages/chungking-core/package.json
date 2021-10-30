@@ -1,6 +1,6 @@
 {
   "name": "@resir014/chungking-core",
-  "version": "0.1.2-canary.1",
+  "version": "0.1.2-canary.3",
   "description": "Core theme variables for the Chungking Design System.",
   "source": "src/index.ts",
   "main": "dist/index.js",

@@ -13,34 +13,38 @@
     ]
   },
   "dependencies": {
-    "@emotion/react": "^11.4.0",
+    "@emotion/react": "^11.5.0",
     "@emotion/styled": "^11.3.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-feather": "^2.0.9"
+    "react-feather": "^2.0.9",
+    "tailwindcss": "^2.2.19"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9",
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
-    "@storybook/addon-essentials": "6.3.6",
-    "@storybook/addon-links": "6.3.6",
-    "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/react": "6.3.6",
-    "@types/jest": "^26.0.24",
-    "@types/react": "^17.0.14",
+    "@babel/core": "^7.16.0",
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
+    "@storybook/addon-essentials": "6.3.12",
+    "@storybook/addon-links": "6.3.12",
+    "@storybook/react": "6.3.12",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.2",
+    "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
-    "babel-loader": "^8.2.2",
-    "caniuse-lite": "^1.0.30001248",
+    "@types/tailwindcss": "^2.2.2",
+    "babel-loader": "^8.2.3",
+    "caniuse-lite": "^1.0.30001272",
     "eslint": "^7.19.0",
     "eslint-config-blvd": "^1.1.0",
     "eslint-config-prettier": "^7.2.0",
     "eslint-import-resolver-typescript": "^2.3.0",
     "eslint-plugin-prettier": "^3.3.1",
-    "husky": "^4.3.8",
-    "jest": "^26.6.3",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "jest-environment-jsdom": "^27.3.1",
     "lerna": "^3.22.1",
-    "lint-staged": "^10.5.3",
+    "lint-staged": "^11.2.6",
     "microbundle": "^0.13.0",
     "postcss": "^8.3.11",
     "prettier": "^2.2.1",
@@ -48,7 +52,7 @@
     "rimraf": "^3.0.2",
     "stylelint": "^13.13.1",
     "stylelint-config-recommended": "^5.0.0",
-    "ts-jest": "^26.5.0",
+    "ts-jest": "^27.0.7",
     "typescript": "^4.3.5"
   },
   "scripts": {
@@ -61,12 +65,6 @@
     "test": "lerna run test",
     "test:coverage": "lerna run test:coverage",
     "validate": "lerna run validate"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "lint-staged"
-    }
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,css,scss,md,html,json}": [

@@ -11,8 +11,10 @@ export default {
   argTypes: {
     spacing: {
       control: {
-        type: 'select',
         options: Object.keys(theme.space)
+      },
+      direction: {
+        options: ['vertical', 'horizontal']
       }
     }
   }
@@ -34,5 +36,61 @@ export const Example: Story = ({ ...args }) => {
   )
 }
 Example.args = {
-  spacing: 'md'
+  spacing: 'md',
+  direction: 'vertical'
+}
+
+export const HorizontalStack: Story = ({ ...args }) => {
+  return (
+    <Box boxShadow="double" backgroundColor="red.900">
+      <Stack direction="horizontal" {...args}>
+        <Box display="flex" alignItems="center" justifyContent="center" backgroundColor="grey.800" sx={{ width: 96, height: 96 }}>
+          Inline Item
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" backgroundColor="grey.800" sx={{ width: 96, height: 96 }}>
+          Inline Item
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" backgroundColor="grey.800" sx={{ width: 96, height: 96 }}>
+          Inline Item
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" backgroundColor="grey.800" sx={{ width: 96, height: 96 }}>
+          Inline Item
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" backgroundColor="grey.800" sx={{ width: 96, height: 96 }}>
+          Inline Item
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" backgroundColor="grey.800" sx={{ width: 96, height: 96 }}>
+          Inline Item
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" backgroundColor="grey.800" sx={{ width: 96, height: 96 }}>
+          Inline Item
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" backgroundColor="grey.800" sx={{ width: 96, height: 96 }}>
+          Inline Item
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" backgroundColor="grey.800" sx={{ width: 96, height: 96 }}>
+          Inline Item
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" backgroundColor="grey.800" sx={{ width: 96, height: 96 }}>
+          Inline Item
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" backgroundColor="grey.800" sx={{ width: 96, height: 96 }}>
+          Inline Item
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" backgroundColor="grey.800" sx={{ width: 96, height: 96 }}>
+          Inline Item
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" backgroundColor="grey.800" sx={{ width: 96, height: 96 }}>
+          Inline Item
+        </Box>
+        <Box display="flex" alignItems="center" justifyContent="center" backgroundColor="grey.800" sx={{ width: 96, height: 96 }}>
+          Inline Item
+        </Box>
+      </Stack>
+    </Box>
+  )
+}
+HorizontalStack.args = {
+  spacing: 'md',
+  direction: 'horizontal'
 }
