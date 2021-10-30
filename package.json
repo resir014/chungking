@@ -18,7 +18,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-feather": "^2.0.9",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^2.2.19"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -27,10 +27,12 @@
     "@storybook/addon-essentials": "6.3.12",
     "@storybook/addon-links": "6.3.12",
     "@storybook/react": "6.3.12",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.2",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
-    "@types/tailwindcss": "^2.2.1",
+    "@types/tailwindcss": "^2.2.2",
     "babel-loader": "^8.2.3",
     "caniuse-lite": "^1.0.30001272",
     "eslint": "^7.19.0",
