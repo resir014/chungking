@@ -43,25 +43,24 @@
     "husky": "^7.0.4",
     "jest": "^27.3.1",
     "jest-environment-jsdom": "^27.3.1",
-    "lerna": "^3.22.1",
     "lint-staged": "^11.2.6",
-    "microbundle": "^0.13.0",
+    "microbundle": "^0.14.1",
     "prettier": "^2.2.1",
     "react-is": "^17.0.2",
     "rimraf": "^3.0.2",
     "ts-jest": "^27.0.7",
-    "typescript": "^4.3.5"
+    "typescript": "^4.4.4"
   },
   "scripts": {
-    "build": "lerna run build",
+    "build": "pnpm run -r build",
     "build-storybook": "build-storybook",
-    "clean": "lerna run clean",
-    "lint": "lerna run lint",
-    "prepublish": "yarn clean && yarn build",
+    "clean": "pnpm run -r clean",
+    "lint": "pnpm run -r lint",
+    "prepublish": "npm run clean && npm run build",
     "storybook": "start-storybook -p 6006",
-    "test": "lerna run test",
-    "test:coverage": "lerna run test:coverage",
-    "validate": "lerna run validate"
+    "test": "pnpm run -r test",
+    "test:coverage": "pnpm run -r test:coverage",
+    "validate": "pnpm run -r validate"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,css,scss,md,html,json}": [

@@ -18,12 +18,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
         with:
-          fetch-depth: 0
+          version: 6.19.1
+
       - uses: actions/setup-node@v1
         with:
-          node-version: '12'
-      - run: yarn install --frozen-lockfile
+          node-version: 14
+          cache: pnpm
+
+      - run: pnpm install
+
       - uses: actions/cache@v1
         id: cache-build
         with:
@@ -40,9 +47,12 @@ jobs:
         with:
           path: '.'
           key: ${{ github.sha }}
+
       - uses: actions/setup-node@v1
         with:
-          node-version: '12'
-      - run: yarn workspace @resir014/chungking-core run validate
+          node-version: 14
+          cache: pnpm
+
+      - run: pnpm --filter "@resir014/chungking-core" run validate
         env:
           CI: true

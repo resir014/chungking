@@ -7,11 +7,9 @@ export interface VariantArgs<TStyle = Record<string, unknown>, K extends string 
   /** theme key for variant definitions */
   scale?: string
   /** inline theme aware variants definitions  */
-  variants?: Partial<
-    {
-      [key in K]: TStyle
-    }
-  >
+  variants?: Partial<{
+    [key in K]: TStyle
+  }>
 }
 
 /**
