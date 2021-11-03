@@ -22,7 +22,7 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          node-version: '14'
       - run: yarn install --frozen-lockfile
       - uses: actions/cache@v1
         id: cache-build
@@ -42,7 +42,7 @@ jobs:
           key: ${{ github.sha }}
       - uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          node-version: '14'
       - run: yarn workspace @resir014/chungking-react run validate
         env:
           CI: true
