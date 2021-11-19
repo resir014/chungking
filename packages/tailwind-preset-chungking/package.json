@@ -17,7 +17,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "microbundle --jsx React.createElement",
+    "build": "microbundle --jsx React.createElement --tsconfig ./tsconfig.json",
     "clean": "rimraf dist",
     "lint": "eslint \"src/**/*.js\"",
     "prepublishOnly": "yarn clean && yarn build",
