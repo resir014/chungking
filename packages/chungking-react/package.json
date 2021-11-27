@@ -2,11 +2,15 @@
   "name": "@resir014/chungking-react",
   "version": "0.3.2-canary.3",
   "description": "@resir014's personal design system.",
+  "type": "module",
   "source": "src/index.ts",
-  "main": "dist/index.js",
-  "module": "dist/index.module.js",
-  "unpkg": "dist/index.umd.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "repository": "https://github.com/resir014/chungking.git",
   "author": "Resi Respati <resir014@gmail.com>",
   "license": "MIT",
@@ -17,9 +21,8 @@
     "access": "public"
   },
   "scripts": {
-    "build": "microbundle --jsx React.createElement",
+    "build": "tsup-node",
     "clean": "rimraf dist",
-    "dev": "microbundle watch --jsx React.createElement",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "prepublishOnly": "yarn clean && yarn build",
     "test": "jest",
@@ -45,5 +48,16 @@
     "react-fast-compare": "^3.2.0",
     "tslib": "^2.3.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "tsup": {
+    "target": "node16",
+    "entryPoints": [
+      "src/index.ts"
+    ],
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "dts": true
+  }
 }
