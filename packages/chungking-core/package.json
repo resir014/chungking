@@ -2,13 +2,12 @@
   "name": "@resir014/chungking-core",
   "version": "0.1.2-canary.3",
   "description": "Core theme variables for the Chungking Design System.",
-  "type": "module",
   "source": "src/index.ts",
   "types": "dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
     }
   },
   "repository": "https://github.com/resir014/chungking.git",

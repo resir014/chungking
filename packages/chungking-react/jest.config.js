@@ -2,9 +2,8 @@
 const config = {
   // transform typescript files with esbuild-jest
   transform: {
-    '^.+\\.tsx?$': ['esbuild-jest', { sourcemap: true, format: 'esm' }]
+    '^.+\\.tsx?$': ['esbuild-jest']
   },
-  extensionsToTreatAsEsm: ['.ts', '.tsx'],
   testEnvironment: 'jest-environment-jsdom',
   setupFilesAfterEnv: ['<rootDir>/src/jest.setup.ts'],
   collectCoverageFrom: [
@@ -17,4 +16,4 @@ const config = {
   ]
 }
 
-export default config
+module.exports = config
