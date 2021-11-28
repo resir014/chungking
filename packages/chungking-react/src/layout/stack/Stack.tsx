@@ -9,6 +9,7 @@ export interface StackProps extends Omit<BoxProps, 'color'> {
   id?: string;
   className?: string;
   style?: React.CSSProperties;
+  as?: React.ElementType<any>;
   color?: string;
   direction?: 'horizontal' | 'vertical';
   spacing?: Space | CSS.Property.Margin;
