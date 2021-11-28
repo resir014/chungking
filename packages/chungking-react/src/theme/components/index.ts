@@ -1,10 +1,10 @@
-import Alert from './Alert'
-import Badge from './Badge'
-import Button from './Button'
-import Card from './Card'
-import Iframe from './Iframe'
-import Skeleton from './Skeleton'
-import * as Typography from './Typography'
+import Alert from './Alert';
+import Badge from './Badge';
+import Button from './Button';
+import Card from './Card';
+import Iframe from './Iframe';
+import Skeleton from './Skeleton';
+import * as Typography from './Typography';
 
 const components = {
   Alert,
@@ -13,7 +13,7 @@ const components = {
   Card,
   Iframe,
   Skeleton,
-  ...Typography
-}
+  ...Typography,
+};
 
-export default components
+export default components;

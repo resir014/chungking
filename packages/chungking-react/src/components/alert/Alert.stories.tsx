@@ -1,7 +1,7 @@
-import React from 'react'
-import { Story, Meta } from '@storybook/react'
+import React from 'react';
+import { Story, Meta } from '@storybook/react';
 
-import Alert, { AlertProps } from './Alert'
+import Alert, { AlertProps } from './Alert';
 
 export default {
   title: 'Components/Alert',
@@ -10,19 +10,19 @@ export default {
     variant: {
       control: {
         type: 'select',
-        options: ['default', 'primary', 'success', 'warning', 'error']
-      }
+        options: ['default', 'primary', 'success', 'warning', 'error'],
+      },
     },
     children: {
-      control: 'text'
-    }
-  }
-} as Meta<AlertProps>
+      control: 'text',
+    },
+  },
+} as Meta<AlertProps>;
 
-const Template: Story<AlertProps> = (args) => <Alert {...args} />
+const Template: Story<AlertProps> = args => <Alert {...args} />;
 
-export const Example = Template.bind({})
+export const Example = Template.bind({});
 Example.args = {
   variant: 'default',
-  children: 'This is an example message.'
-}
+  children: 'This is an example message.',
+};

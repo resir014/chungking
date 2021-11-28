@@ -1,17 +1,17 @@
-import { ComponentThemeConfig } from '../../system'
+import { ComponentThemeConfig } from '../../system';
 
 const Card: ComponentThemeConfig = {
   propToScaleMap: [['elevation', 'elevations']],
   scales: {
     elevations: {
       single: {
-        boxShadow: 'single'
+        boxShadow: 'single',
       },
       double: {
-        boxShadow: 'double'
-      }
-    }
-  }
-}
+        boxShadow: 'double',
+      },
+    },
+  },
+};
 
-export default Card
+export default Card;

@@ -1,6 +1,6 @@
-import { css } from '@emotion/react'
-import { darken, transparentize } from 'polished'
-import { theme } from '../../theme'
+import { css } from '@emotion/react';
+import { darken, transparentize } from 'polished';
+import { theme } from '../../theme';
 
 export const DisabledButtonStyles = css`
   &:disabled,
@@ -16,7 +16,7 @@ export const DisabledButtonStyles = css`
       text-decoration: none;
     }
   }
-`
+`;
 
 export const GhostedButtonStyles = css`
   margin: -8px -12px;
@@ -48,7 +48,7 @@ export const GhostedButtonStyles = css`
       text-decoration: none;
     }
   }
-`
+`;
 
 export const ButtonBase = css`
   display: inline-flex;
@@ -73,4 +73,4 @@ export const ButtonBase = css`
     outline: none;
     text-decoration: none;
   }
-`
+`;

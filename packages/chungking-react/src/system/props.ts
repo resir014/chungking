@@ -21,10 +21,10 @@ import {
   space,
   SpaceProps,
   typography,
-  TypographyProps
-} from '@spicy-ui/styled-system'
-import { transform, TransformProps } from './parsers/transform'
-import { transition, TransitionProps } from './parsers/transition'
+  TypographyProps,
+} from '@spicy-ui/styled-system';
+import { transform, TransformProps } from './parsers/transform';
+import { transition, TransitionProps } from './parsers/transition';
 
 export type AllSystemProps = SpaceProps &
   ColorProps &
@@ -38,7 +38,7 @@ export type AllSystemProps = SpaceProps &
   ShadowProps &
   TransitionProps &
   TransformProps &
-  OtherProps
+  OtherProps;
 
 export const allSystemProps = compose(
   space,
@@ -53,5 +53,5 @@ export const allSystemProps = compose(
   shadow,
   transition,
   transform,
-  other
-)
+  other,
+);

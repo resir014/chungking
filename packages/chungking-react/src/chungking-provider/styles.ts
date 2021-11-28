@@ -1,6 +1,6 @@
-import { css } from '@emotion/react'
-import { transparentize } from 'polished'
-import { Theme } from '../theme'
+import { css } from '@emotion/react';
+import { transparentize } from 'polished';
+import { Theme } from '../theme';
 
 const styles = (theme: Theme) => css`
   html {
@@ -160,6 +160,6 @@ const styles = (theme: Theme) => css`
       top: 0;
     }
   }
-`
+`;
 
-export default styles
+export default styles;
