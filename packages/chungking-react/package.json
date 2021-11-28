@@ -1,6 +1,6 @@
 {
   "name": "@resir014/chungking-react",
-  "version": "0.3.2-canary.4",
+  "version": "0.3.2-canary.5",
   "description": "@resir014's personal design system.",
   "main": "./src/index.ts",
   "types": "dist/index.d.ts",
