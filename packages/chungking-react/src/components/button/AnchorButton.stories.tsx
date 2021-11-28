@@ -1,8 +1,8 @@
-import React from 'react'
-import { Story, Meta } from '@storybook/react'
+import React from 'react';
+import { Story, Meta } from '@storybook/react';
 
-import AnchorButton from './AnchorButton'
-import { AnchorButtonProps } from './types'
+import AnchorButton from './AnchorButton';
+import { AnchorButtonProps } from './types';
 
 export default {
   title: 'Components/AnchorButton',
@@ -11,31 +11,31 @@ export default {
     variant: {
       control: {
         type: 'select',
-        options: ['default', 'primary', 'danger']
-      }
+        options: ['default', 'primary', 'danger'],
+      },
     },
     size: {
       control: {
         type: 'select',
-        options: ['sm', 'md', 'lg']
-      }
+        options: ['sm', 'md', 'lg'],
+      },
     },
     children: {
-      control: 'text'
+      control: 'text',
     },
     href: {
-      control: 'text'
-    }
-  }
-} as Meta<AnchorButtonProps>
+      control: 'text',
+    },
+  },
+} as Meta<AnchorButtonProps>;
 
-const Template: Story<AnchorButtonProps> = (args) => <AnchorButton {...args} />
+const Template: Story<AnchorButtonProps> = args => <AnchorButton {...args} />;
 
-export const Example = Template.bind({})
+export const Example = Template.bind({});
 Example.args = {
   variant: 'default',
   size: 'md',
   children: 'Push Me',
   href: 'https://open.spotify.com/track/09j3qGyo1dt3i7iINMctj0',
-  target: '_blank'
-}
+  target: '_blank',
+};

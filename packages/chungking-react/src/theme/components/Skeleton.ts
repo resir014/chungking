@@ -1,4 +1,4 @@
-import { ComponentThemeConfig } from '../../system'
+import { ComponentThemeConfig } from '../../system';
 
 const Skeleton: ComponentThemeConfig = {
   baseStyle: () => ({
@@ -6,8 +6,8 @@ const Skeleton: ComponentThemeConfig = {
     width: '100%',
     minWidth: 200,
     height: 20,
-    backgroundColor: 'grey.700'
-  })
-}
+    backgroundColor: 'grey.700',
+  }),
+};
 
-export default Skeleton
+export default Skeleton;

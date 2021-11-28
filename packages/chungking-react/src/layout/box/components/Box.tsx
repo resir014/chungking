@@ -1,16 +1,16 @@
 /* eslint-disable no-underscore-dangle */
-import * as React from 'react'
-import styled from '@emotion/styled'
-import { shouldForwardProp } from '@spicy-ui/styled-system'
-import { allSystemProps, AllSystemProps, pseudo, PseudoProps, sxMixin, SxProps } from '../../../system'
+import * as React from 'react';
+import styled from '@emotion/styled';
+import { shouldForwardProp } from '@spicy-ui/styled-system';
+import { allSystemProps, AllSystemProps, pseudo, PseudoProps, sxMixin, SxProps } from '../../../system';
 
 export interface BoxProps extends AllSystemProps, PseudoProps, SxProps {
   /** Additional CSS classes to add to the component. */
-  className?: string
+  className?: string;
   /** Additional CSS properties to add to the component. */
-  style?: React.CSSProperties
+  style?: React.CSSProperties;
   /** Override color props */
-  color?: string
+  color?: string;
 }
 
 /**
@@ -18,7 +18,7 @@ export interface BoxProps extends AllSystemProps, PseudoProps, SxProps {
  * base component for all display elements.
  */
 export const Box = styled('div', {
-  shouldForwardProp
-})<BoxProps>(allSystemProps, pseudo, sxMixin)
+  shouldForwardProp,
+})<BoxProps>(allSystemProps, pseudo, sxMixin);
 
-Box.displayName = 'Box'
+Box.displayName = 'Box';

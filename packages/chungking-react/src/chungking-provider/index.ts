@@ -1,2 +1,2 @@
-export { default as ChungkingProvider } from './ChungkingProvider'
-export * from './ChungkingProvider'
+export { default as ChungkingProvider } from './ChungkingProvider';
+export * from './ChungkingProvider';

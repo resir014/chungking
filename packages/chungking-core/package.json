@@ -1,10 +1,10 @@
 {
   "name": "@resir014/chungking-core",
-  "version": "0.1.2-canary.3",
+  "version": "0.1.2-canary.5",
   "description": "Core theme variables for the Chungking Design System.",
   "source": "src/index.ts",
   "main": "dist/index.js",
-  "module": "dist/index.module.js",
+  "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/resir014/chungking.git",
   "author": "Resi Respati <resir014@gmail.com>",
@@ -16,12 +16,19 @@
     "access": "public"
   },
   "scripts": {
-    "build": "microbundle",
+    "build": "tsup-node --legacy-output",
     "clean": "rimraf dist",
-    "dev": "microbundle watch",
-    "lint": "eslint \"src/**/*.{ts,tsx}\"",
-    "prepublishOnly": "yarn clean && yarn build",
-    "type-check": "tsc",
-    "validate": "yarn lint && yarn type-check"
+    "prepublishOnly": "yarn clean && yarn build"
+  },
+  "tsup": {
+    "target": "node16",
+    "entryPoints": [
+      "src/index.ts"
+    ],
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "dts": true
   }
 }

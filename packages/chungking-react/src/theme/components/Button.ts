@@ -1,15 +1,15 @@
-import { transparentize } from 'polished'
-import { ComponentThemeConfig } from '../../system'
+import { transparentize } from 'polished';
+import { ComponentThemeConfig } from '../../system';
 
 const buttonHoverFocusStyles = {
   outline: 'none',
-  textDecoration: 'none'
-}
+  textDecoration: 'none',
+};
 
 const Button: ComponentThemeConfig = {
   propToScaleMap: [
     ['variant', 'variants'],
-    ['size', 'sizes']
+    ['size', 'sizes'],
   ],
   baseStyle: ({ theme }) => ({
     display: 'inline-flex',
@@ -26,14 +26,14 @@ const Button: ComponentThemeConfig = {
     cursor: 'pointer',
     _disabled: {
       cursor: 'not-allowed',
-      opacity: 0.5
+      opacity: 0.5,
     },
     _hover: buttonHoverFocusStyles,
     _focus: {
       ...buttonHoverFocusStyles,
-      boxShadow: `${transparentize(0.4, theme.colors.green[500])} 0 0 0 3px`
+      boxShadow: `${transparentize(0.4, theme.colors.green[500])} 0 0 0 3px`,
     },
-    _active: buttonHoverFocusStyles
+    _active: buttonHoverFocusStyles,
   }),
   scales: {
     sizes: {
@@ -42,47 +42,47 @@ const Button: ComponentThemeConfig = {
         height: '32px',
         minWidth: '32px',
         fontSize: '14px',
-        borderRadius: 6
+        borderRadius: 6,
       },
       md: {
         px: 'lg',
         height: '40px',
         minWidth: '40px',
         fontSize: '16px',
-        borderRadius: 8
+        borderRadius: 8,
       },
       lg: {
         px: 'xl',
         height: '48px',
         minWidth: '48px',
         fontSize: '20px',
-        borderRadius: 10
-      }
+        borderRadius: 10,
+      },
     },
     variants: {
       default: {
         backgroundColor: 'grey.700',
         color: 'white',
         _hover: {
-          backgroundColor: 'grey.800'
-        }
+          backgroundColor: 'grey.800',
+        },
       },
       primary: {
         backgroundColor: 'blue.500',
         color: 'white',
         _hover: {
-          backgroundColor: 'blue.600'
-        }
+          backgroundColor: 'blue.600',
+        },
       },
       danger: {
         backgroundColor: 'red.600',
         color: 'white',
         _hover: {
-          backgroundColor: 'red.700'
-        }
-      }
-    }
-  }
-}
+          backgroundColor: 'red.700',
+        },
+      },
+    },
+  },
+};
 
-export default Button
+export default Button;

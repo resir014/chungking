@@ -1,12 +1,12 @@
-import { ComponentThemeConfig } from '../../system'
+import { ComponentThemeConfig } from '../../system';
 
 const Iframe: ComponentThemeConfig = {
   baseStyle: () => ({
     display: 'block',
     verticalAlign: 'middle',
     borderWidth: 0,
-    borderStyle: 'solid'
-  })
-}
+    borderStyle: 'solid',
+  }),
+};
 
-export default Iframe
+export default Iframe;

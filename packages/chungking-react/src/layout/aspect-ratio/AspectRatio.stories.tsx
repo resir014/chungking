@@ -1,8 +1,8 @@
-import React from 'react'
-import { Story, Meta } from '@storybook/react'
+import React from 'react';
+import { Story, Meta } from '@storybook/react';
 
-import AspectRatio, { AspectRatioProps } from './AspectRatio'
-import Iframe from '../../components/iframe/Iframe'
+import AspectRatio, { AspectRatioProps } from './AspectRatio';
+import Iframe from '../../components/iframe/Iframe';
 
 export default {
   title: 'Layout/AspectRatio',
@@ -11,13 +11,13 @@ export default {
     ratio: {
       control: {
         type: 'select',
-        options: [1, 4 / 3, 16 / 9]
-      }
-    }
-  }
-} as Meta<AspectRatioProps>
+        options: [1, 4 / 3, 16 / 9],
+      },
+    },
+  },
+} as Meta<AspectRatioProps>;
 
-export const WithIframe: Story<AspectRatioProps> = (args) => {
+export const WithIframe: Story<AspectRatioProps> = args => {
   return (
     <AspectRatio width="100%" maxWidth={480} {...args}>
       <Iframe
@@ -27,19 +27,19 @@ export const WithIframe: Story<AspectRatioProps> = (args) => {
         allowFullScreen
       />
     </AspectRatio>
-  )
-}
+  );
+};
 WithIframe.args = {
-  ratio: 16 / 9
-}
+  ratio: 16 / 9,
+};
 
-export const WithImage: Story<AspectRatioProps> = (args) => {
+export const WithImage: Story<AspectRatioProps> = args => {
   return (
     <AspectRatio width="100%" maxWidth={480} {...args}>
       <img src="https://picsum.photos/seed/chungking/1920/1080" alt="Sample" css={{ objectFit: 'cover' }} />
     </AspectRatio>
-  )
-}
+  );
+};
 WithImage.args = {
-  ...WithIframe.args
-}
+  ...WithIframe.args,
+};

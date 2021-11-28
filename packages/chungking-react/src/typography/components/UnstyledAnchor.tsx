@@ -1,9 +1,9 @@
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
-import { shouldForwardProp } from '@spicy-ui/styled-system'
-import { allSystemProps, AllSystemProps, pseudo, PseudoProps } from '../../system'
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+import { shouldForwardProp } from '@spicy-ui/styled-system';
+import { allSystemProps, AllSystemProps, pseudo, PseudoProps } from '../../system';
 
-export type UnstyledAnchorProps = AllSystemProps & PseudoProps
+export type UnstyledAnchorProps = AllSystemProps & PseudoProps;
 
 const UnstyledAnchorStyles = css`
   font-style: inherit;
@@ -37,13 +37,13 @@ const UnstyledAnchorStyles = css`
     outline: inherit;
     box-shadow: inherit;
   }
-`
+`;
 
 /** An anchor element with all styling elements removed (incl. hover/focus effects). */
 const UnstyledAnchor = styled('a', {
-  shouldForwardProp
-})<UnstyledAnchorProps>(UnstyledAnchorStyles, allSystemProps, pseudo)
+  shouldForwardProp,
+})<UnstyledAnchorProps>(UnstyledAnchorStyles, allSystemProps, pseudo);
 
-UnstyledAnchor.displayName = 'UnstyledAnchor'
+UnstyledAnchor.displayName = 'UnstyledAnchor';
 
-export default UnstyledAnchor
+export default UnstyledAnchor;
