@@ -23,10 +23,9 @@
   "scripts": {
     "build": "tsup-node",
     "clean": "rimraf dist",
-    "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "prepublishOnly": "yarn clean && yarn build",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
+    "test:coverage": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
     "type-check": "tsc",
     "validate": "yarn lint && yarn type-check"
   },

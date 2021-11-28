@@ -23,7 +23,6 @@
   "scripts": {
     "build": "tsup-node",
     "clean": "rimraf dist",
-    "lint": "eslint \"src/**/*.js\"",
     "prepublishOnly": "yarn clean && yarn build",
     "validate": "yarn lint"
   },
