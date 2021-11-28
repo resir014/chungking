@@ -2,14 +2,10 @@
   "name": "@resir014/chungking-core",
   "version": "0.1.2-canary.4",
   "description": "Core theme variables for the Chungking Design System.",
-  "main": "./src/index.ts",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
   "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.js"
-    }
-  },
   "repository": "https://github.com/resir014/chungking.git",
   "author": "Resi Respati <resir014@gmail.com>",
   "license": "MIT",
@@ -20,7 +16,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup-node",
+    "build": "tsup-node --legacy-output",
     "clean": "rimraf dist",
     "prepublishOnly": "yarn clean && yarn build"
   },
