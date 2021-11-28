@@ -4,6 +4,7 @@
     "module": "es2022",
     "moduleResolution": "node",
     "lib": ["es2021", "dom"],
+    "jsx": "react",
     "importHelpers": true,
     "declaration": true,
     "declarationMap": true,

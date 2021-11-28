@@ -64,7 +64,7 @@
     "test": "lerna run test",
     "test:coverage": "lerna run test:coverage",
     "type-check": "tsc --noEmit",
-    "validate": "yarn lint"
+    "validate": "yarn lint && yarn type-check"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,css,scss,md,html,json}": [
