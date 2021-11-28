@@ -22,9 +22,7 @@
   "scripts": {
     "build": "tsup-node",
     "clean": "rimraf dist",
-    "prepublishOnly": "yarn clean && yarn build",
-    "type-check": "tsc",
-    "validate": "yarn lint && yarn type-check"
+    "prepublishOnly": "yarn clean && yarn build"
   },
   "tsup": {
     "target": "node16",

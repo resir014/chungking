@@ -24,9 +24,7 @@
     "clean": "rimraf dist",
     "prepublishOnly": "yarn clean && yarn build",
     "test": "jest",
-    "test:coverage": "jest --coverage",
-    "type-check": "tsc",
-    "validate": "yarn lint && yarn type-check"
+    "test:coverage": "jest --coverage"
   },
   "peerDependencies": {
     "@emotion/react": "^11.0.0",

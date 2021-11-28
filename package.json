@@ -63,7 +63,8 @@
     "storybook": "start-storybook -p 6006",
     "test": "lerna run test",
     "test:coverage": "lerna run test:coverage",
-    "validate": "lerna run validate"
+    "type-check": "tsc --noEmit",
+    "validate": "yarn lint"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,css,scss,md,html,json}": [
