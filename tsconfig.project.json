@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "esnext",
+    "target": "es2021",
+    "module": "es2022",
     "moduleResolution": "node",
-    "lib": ["esnext", "dom"],
+    "lib": ["es2021", "dom"],
     "importHelpers": true,
     "declaration": true,
     "declarationMap": true,

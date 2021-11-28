@@ -2,11 +2,14 @@
   "name": "@resir014/tailwind-preset-chungking",
   "version": "0.1.4-canary.3",
   "description": "TailwindCSS preset for the Chungking design system.",
-  "source": "src/tailwind-preset-chungking.js",
-  "main": "dist/tailwind-preset-chungking.js",
-  "module": "dist/tailwind-preset-chungking.module.js",
-  "unpkg": "dist/tailwind-preset-chungking.umd.js",
+  "main": "./src/tailwind-preset-chungking.js",
   "types": "dist/tailwind-preset-chungking.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/tailwind-preset-chungking.mjs",
+      "require": "./dist/tailwind-preset-chungking.js"
+    }
+  },
   "repository": "https://github.com/resir014/chungking.git",
   "author": "Resi Respati <resir014@gmail.com>",
   "license": "MIT",
@@ -17,9 +20,8 @@
     "access": "public"
   },
   "scripts": {
-    "build": "microbundle --jsx React.createElement",
+    "build": "tsup-node",
     "clean": "rimraf dist",
-    "lint": "eslint \"src/**/*.js\"",
     "prepublishOnly": "yarn clean && yarn build",
     "validate": "yarn lint"
   },
@@ -29,5 +31,16 @@
   "peerDependencies": {
     "tailwindcss": "^2.0.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "tsup": {
+    "target": "node16",
+    "entryPoints": [
+      "src/tailwind-preset-chungking.js"
+    ],
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "dts": true
+  }
 }

@@ -1,5 +1,4 @@
 module.exports = {
-  root: true,
   extends: ['blvd/react', 'prettier', 'prettier/@typescript-eslint', 'prettier/react', 'plugin:prettier/recommended'],
   plugins: ['prettier'],
   rules: {

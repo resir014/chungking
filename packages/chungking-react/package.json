@@ -2,11 +2,14 @@
   "name": "@resir014/chungking-react",
   "version": "0.3.2-canary.3",
   "description": "@resir014's personal design system.",
-  "source": "src/index.ts",
-  "main": "dist/index.js",
-  "module": "dist/index.module.js",
-  "unpkg": "dist/index.umd.js",
+  "main": "./src/index.ts",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
   "repository": "https://github.com/resir014/chungking.git",
   "author": "Resi Respati <resir014@gmail.com>",
   "license": "MIT",
@@ -17,15 +20,11 @@
     "access": "public"
   },
   "scripts": {
-    "build": "microbundle --jsx React.createElement",
+    "build": "tsup-node",
     "clean": "rimraf dist",
-    "dev": "microbundle watch --jsx React.createElement",
-    "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "prepublishOnly": "yarn clean && yarn build",
     "test": "jest",
-    "test:coverage": "jest --coverage",
-    "type-check": "tsc",
-    "validate": "yarn lint && yarn type-check"
+    "test:coverage": "jest --coverage"
   },
   "peerDependencies": {
     "@emotion/react": "^11.0.0",
@@ -35,15 +34,26 @@
     "react-feather": "^2.0.0"
   },
   "dependencies": {
-    "@chakra-ui/css-reset": "^1.0.0",
+    "@chakra-ui/css-reset": "^1.1.1",
     "@resir014/chungking-core": "^0.1.2-canary.3",
     "@spicy-ui/styled-system": "^0.0.1-alpha.3",
     "clsx": "^1.1.1",
-    "csstype": "^3.0.9",
+    "csstype": "^3.0.10",
     "deepmerge": "^4.2.2",
     "polished": "^4.1.3",
     "react-fast-compare": "^3.2.0",
     "tslib": "^2.3.1"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "tsup": {
+    "target": "node16",
+    "entryPoints": [
+      "src/index.ts"
+    ],
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "dts": true
+  }
 }
