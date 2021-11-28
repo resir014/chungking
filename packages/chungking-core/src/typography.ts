@@ -1,11 +1,11 @@
 const systemFonts =
-  "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'"
+  "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'";
 
 const fonts = {
   sansSerif: `"Inter", ${systemFonts}`,
   serif: 'Georgia, "Times New Roman", Times, serif',
-  monospace: '"JetBrains Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace'
-}
+  monospace: '"JetBrains Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace',
+};
 
 const typography = {
   fonts,
@@ -23,7 +23,7 @@ const typography = {
     '6xl': '3.75rem',
     '7xl': '4.5rem',
     '8xl': '6rem',
-    '9xl': '8rem'
+    '9xl': '8rem',
   },
   lineHeights: {
     xs: '1rem',
@@ -53,7 +53,7 @@ const typography = {
     snug: 1.375,
     normal: '1.5rem',
     relaxed: 1.625,
-    loose: '2'
+    loose: '2',
   },
   letterSpacings: {
     tighter: '-0.05em',
@@ -61,8 +61,8 @@ const typography = {
     normal: '0',
     wide: '0.025em',
     wider: '0.05em',
-    widest: '0.1em'
-  }
-}
+    widest: '0.1em',
+  },
+};
 
-export default typography
+export default typography;

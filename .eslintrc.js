@@ -1,22 +1,29 @@
 module.exports = {
-  extends: ['blvd/react', 'prettier', 'prettier/@typescript-eslint', 'prettier/react', 'plugin:prettier/recommended'],
+  root: true,
+  extends: ['kentcdodds', 'kentcdodds/react', 'kentcdodds/jsx-a11y', 'prettier', 'plugin:prettier/recommended'],
   plugins: ['prettier'],
   rules: {
+    '@typescript-eslint/no-explicit-any': 'warn',
+    '@typescript-eslint/no-unsafe-argument': 'off',
     'import/no-extraneous-dependencies': 'off',
-    'import/no-unresolved': 'off',
     'jsx-a11y/anchor-is-valid': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'prettier/prettier': 'error',
-    'no-underscore-dangle': 'off',
-    'no-use-before-define': 'off',
-    '@typescript-eslint/explicit-module-boundary-types': 'off',
-    '@typescript-eslint/no-use-before-define': ['error', { functions: true, classes: true, variables: true }]
+    'no-warning-comments': 'warn',
+  },
+  settings: {
+    'import/resolver': {
+      typescript: {
+        project: './tsconfig.json',
+      },
+    },
   },
   overrides: [
     {
-      files: ['.eslintrc.js', '*.config.js'],
-      parserOptions: { sourceType: 'script' },
-      env: { node: true }
-    }
-  ]
-}
+      files: ['**/*.(d.)?ts(x)?'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        project: './tsconfig.json',
+      },
+      rules: {},
+    },
+  ],
+};

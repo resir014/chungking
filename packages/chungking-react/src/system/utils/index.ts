@@ -1,4 +1,4 @@
-export * from './components'
+export * from './components';
 
-export { default as variant } from './variant'
-export * from './variant'
+export { default as variant } from './variant';
+export * from './variant';

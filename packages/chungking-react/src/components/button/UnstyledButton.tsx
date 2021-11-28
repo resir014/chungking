@@ -1,9 +1,9 @@
-import { css } from '@emotion/react'
-import styled from '@emotion/styled'
-import { shouldForwardProp } from '@spicy-ui/styled-system'
-import { AllSystemProps, allSystemProps, pseudo, PseudoProps } from '../../system'
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+import { shouldForwardProp } from '@spicy-ui/styled-system';
+import { AllSystemProps, allSystemProps, pseudo, PseudoProps } from '../../system';
 
-export type UnstyledButtonProps = AllSystemProps & PseudoProps
+export type UnstyledButtonProps = AllSystemProps & PseudoProps;
 
 const UnstyledButtonStyles = css`
   width: auto;
@@ -31,13 +31,13 @@ const UnstyledButtonStyles = css`
     border: 0;
     padding: 0;
   }
-`
+`;
 
 /** A button element with all styling elements removed (incl. hover/focus effects). */
 const UnstyledButton = styled('button', {
-  shouldForwardProp
-})<UnstyledButtonProps>(UnstyledButtonStyles, allSystemProps, pseudo)
+  shouldForwardProp,
+})<UnstyledButtonProps>(UnstyledButtonStyles, allSystemProps, pseudo);
 
-UnstyledButton.displayName = 'UnstyledButton'
+UnstyledButton.displayName = 'UnstyledButton';
 
-export default UnstyledButton
+export default UnstyledButton;

@@ -1,4 +1,4 @@
-import { colors, shadows, sizes, space, responsive, typography } from '@resir014/chungking-core'
+import { colors, shadows, sizes, space, responsive, typography } from '@resir014/chungking-core';
 
 const foundations = {
   colors,
@@ -6,8 +6,8 @@ const foundations = {
   sizes,
   space,
   ...responsive,
-  ...typography
-}
+  ...typography,
+};
 
-export const { mediaQueries } = responsive
-export default foundations
+export const { mediaQueries } = responsive;
+export default foundations;

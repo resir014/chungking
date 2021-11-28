@@ -1,9 +1,9 @@
-import * as React from 'react'
-import styled from '@emotion/styled'
-import { Box, BoxProps } from '../box'
+import * as React from 'react';
+import styled from '@emotion/styled';
+import { Box, BoxProps } from '../box';
 
 export interface AspectRatioProps extends React.PropsWithChildren<BoxProps> {
-  ratio?: number
+  ratio?: number;
 }
 
 const Root = styled(Box)<AspectRatioProps>`
@@ -13,7 +13,7 @@ const Root = styled(Box)<AspectRatioProps>`
     height: 0;
     content: '';
     display: block;
-    padding-bottom: calc(100% / (${(props) => props.ratio}));
+    padding-bottom: calc(100% / (${props => props.ratio}));
   }
 
   & > * {
@@ -34,7 +34,7 @@ const Root = styled(Box)<AspectRatioProps>`
   & > video {
     object-fit: cover;
   }
-`
+`;
 
 /** AspectRatio is used to embed responsive elements, such as images, videos, etc. */
 const AspectRatio = React.forwardRef<HTMLDivElement, AspectRatioProps>(({ ratio = 4 / 3, children, ...rest }, ref) => {
@@ -42,7 +42,9 @@ const AspectRatio = React.forwardRef<HTMLDivElement, AspectRatioProps>(({ ratio 
     <Root ref={ref} ratio={ratio} {...rest}>
       {children}
     </Root>
-  )
-})
+  );
+});
 
-export default AspectRatio
+AspectRatio.displayName = 'AspectRatio';
+
+export default AspectRatio;

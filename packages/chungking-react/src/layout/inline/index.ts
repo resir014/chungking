@@ -1,2 +1,2 @@
-export * from './Inline'
-export { default as Inline } from './Inline'
+export * from './Inline';
+export { default as Inline } from './Inline';
