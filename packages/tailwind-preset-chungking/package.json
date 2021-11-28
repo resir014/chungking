@@ -1,6 +1,6 @@
 {
   "name": "@resir014/tailwind-preset-chungking",
-  "version": "0.1.4-canary.3",
+  "version": "0.1.4-canary.4",
   "description": "TailwindCSS preset for the Chungking design system.",
   "main": "./src/tailwind-preset-chungking.js",
   "types": "dist/tailwind-preset-chungking.d.ts",
@@ -26,12 +26,11 @@
     "validate": "yarn lint"
   },
   "dependencies": {
-    "@resir014/chungking-core": "^0.1.2-canary.3"
+    "@resir014/chungking-core": "^0.1.2-canary.4"
   },
   "peerDependencies": {
     "tailwindcss": "^2.0.0"
   },
-  "devDependencies": {},
   "tsup": {
     "target": "node16",
     "entryPoints": [

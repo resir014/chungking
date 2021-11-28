@@ -1,6 +1,6 @@
 {
   "name": "@resir014/chungking-react",
-  "version": "0.3.2-canary.3",
+  "version": "0.3.2-canary.4",
   "description": "@resir014's personal design system.",
   "main": "./src/index.ts",
   "types": "dist/index.d.ts",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@chakra-ui/css-reset": "^1.1.1",
-    "@resir014/chungking-core": "^0.1.2-canary.3",
+    "@resir014/chungking-core": "^0.1.2-canary.4",
     "@spicy-ui/styled-system": "^0.0.1-alpha.3",
     "clsx": "^1.1.1",
     "csstype": "^3.0.10",
@@ -44,7 +44,6 @@
     "react-fast-compare": "^3.2.0",
     "tslib": "^2.3.1"
   },
-  "devDependencies": {},
   "tsup": {
     "target": "node16",
     "entryPoints": [
