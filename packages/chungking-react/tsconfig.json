@@ -3,7 +3,6 @@
   "compilerOptions": {
     "outDir": "./dist",
     "rootDir": "./src",
-    "jsx": "react",
     "typeRoots": ["./@types", "./node_modules/@types", "../../@types", "../../node_modules/@types"]
   }
 }
