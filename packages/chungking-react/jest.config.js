@@ -2,7 +2,7 @@
 const config = {
   // transform typescript files with esbuild-jest
   transform: {
-    '^.+\\.tsx?$': ['esbuild-jest']
+    '^.+\\.tsx?$': ['esbuild-jest'],
   },
   testEnvironment: 'jest-environment-jsdom',
   setupFilesAfterEnv: ['<rootDir>/src/jest.setup.ts'],
@@ -12,8 +12,8 @@ const config = {
     '!src/**/*.story.{ts,tsx}',
     '!src/**/index.{ts,tsx}',
     '!src/stories/**/*.{ts,tsx}',
-    '!src/index.{ts,tsx}'
-  ]
-}
+    '!src/index.{ts,tsx}',
+  ],
+};
 
-module.exports = config
+module.exports = config;

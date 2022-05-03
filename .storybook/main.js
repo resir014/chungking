@@ -16,7 +16,18 @@ function convertTsConfigPathsToWebpackAliases() {
 
 module.exports = {
   stories: ['../packages/chungking-react/**/*.stories.mdx', '../packages/chungking-react/**/*.stories.@(js|jsx|ts|tsx)'],
-  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
+  addons: [
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        postcssLoaderOptions: {
+          implementation: require('postcss')
+        }
+      }
+    }
+  ],
   webpackFinal: async (config) => {
     return {
       ...config,
