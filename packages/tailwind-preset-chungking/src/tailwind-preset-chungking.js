@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        current: 'currentColor',
         'chungking-white': colors.white,
         'chungking-black': colors.black,
         'chungking-grey': {

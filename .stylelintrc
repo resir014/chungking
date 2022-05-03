@@ -1,14 +1,14 @@
 {
+  "$schema": "https://json.schemastore.org/stylelintrc.json",
   "extends": "stylelint-config-recommended",
   "rules": {
-    "at-rule-no-unknown": [ true, {
-      "ignoreAtRules": [
-        "extends",
-        "tailwind",
-        "layer"
-      ]
-    }],
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": ["extends", "tailwind", "layer"]
+      }
+    ],
     "block-no-empty": null,
-    "unit-whitelist": ["em", "rem", "s", "vw", "vh", "%", "px"]
+    "unit-allowed-list": ["em", "rem", "s", "vw", "vh", "%", "px"]
   }
 }
