@@ -5,6 +5,9 @@
 # Build directory
 dist/
 
+# Turbo logs
+.turbo
+
 # npm lockfile (we use yarn)
 /package-lock.json
 
