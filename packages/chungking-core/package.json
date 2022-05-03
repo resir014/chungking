@@ -18,7 +18,8 @@
   "scripts": {
     "build": "tsup-node --legacy-output",
     "clean": "rimraf dist",
-    "prepublishOnly": "yarn clean && yarn build"
+    "dev": "tsup-node --watch --legacy-output",
+    "prepublish": "yarn clean && yarn build"
   },
   "tsup": {
     "target": "node16",
