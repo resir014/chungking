@@ -24,7 +24,6 @@
     "@babel/core": "^7.16.0",
     "@commitlint/cli": "^13.2.1",
     "@commitlint/config-conventional": "^13.2.0",
-    "@resir014/tailwind-preset-chungking": "^0.1.4-canary.5",
     "@storybook/addon-essentials": "6.3.12",
     "@storybook/addon-links": "6.3.12",
     "@storybook/addon-postcss": "^2.0.0",

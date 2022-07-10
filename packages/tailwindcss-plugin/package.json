@@ -1,0 +1,42 @@
+{
+  "name": "@chungking-ui/tailwindcss-plugin",
+  "version": "0.0.0",
+  "description": "The TailwindCSS plugin to apply the Chungking design system",
+  "source": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/resir014/chungking.git",
+  "author": "Resi Respati <resir014@gmail.com>",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup-node --legacy-output",
+    "clean": "rimraf dist",
+    "dev": "tsup-node --watch --legacy-output",
+    "prepublish": "yarn clean && yarn build",
+    "validate": "yarn lint"
+  },
+  "dependencies": {
+    "@resir014/tailwind-preset-chungking": "^0.1.4-canary.6"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.0.0"
+  },
+  "tsup": {
+    "target": "node16",
+    "entryPoints": [
+      "src/index.js"
+    ],
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "dts": true
+  }
+}
