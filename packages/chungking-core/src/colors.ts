@@ -129,4 +129,6 @@ const colors = {
   magenta,
 };
 
+export type Colors = typeof colors;
+
 export default colors;

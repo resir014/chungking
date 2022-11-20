@@ -1,39 +1,34 @@
+import { Colors } from '@resir014/chungking-core';
+import clsx from 'clsx';
 import * as React from 'react';
-import styled from '@emotion/styled';
-import { shouldForwardProp } from '@spicy-ui/styled-system';
-import {
-  allSystemProps,
-  AllSystemProps,
-  getComponentStyles,
-  pseudo,
-  PseudoProps,
-  sxMixin,
-  SxProps,
-} from '../../system';
-import { theme } from '../../theme';
 
-type ColorScheme = keyof Omit<typeof theme.colors, 'white' | 'black'>;
+type ColorScheme = keyof Omit<Colors, 'white' | 'black'>;
 
-export interface BadgeProps extends AllSystemProps, PseudoProps, SxProps {
+export interface BadgeProps extends React.ComponentPropsWithoutRef<'span'> {
   className?: string;
   style?: React.CSSProperties;
   variant?: 'outline' | 'solid' | 'subtle';
+  size?: 'md' | 'lg';
   colorScheme?: ColorScheme;
   color?: string;
   children?: React.ReactNode;
 }
 
-/**
- * Text component provided as a styled component primitive.
- */
-const Badge = styled('span', { shouldForwardProp })<BadgeProps>(
-  getComponentStyles('Badge'),
-  allSystemProps,
-  pseudo,
-  sxMixin,
+const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(
+  ({ className, children, variant = 'solid', size = 'md', colorScheme = 'grey', ...rest }, ref) => {
+    return (
+      <span
+        ref={ref}
+        className={clsx('ck-badge', `ck-badge--${variant}`, `ck-badge--${size}`, `ck-badge--${colorScheme}`)}
+        {...rest}
+      >
+        {children}
+      </span>
+    );
+  },
 );
 
-Badge.displayName = 'Text';
+Badge.displayName = 'Badge';
 
 Badge.defaultProps = {
   variant: 'solid',

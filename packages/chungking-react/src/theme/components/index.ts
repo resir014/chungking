@@ -1,4 +1,3 @@
-import Alert from './Alert';
 import Badge from './Badge';
 import Button from './Button';
 import Card from './Card';
@@ -7,7 +6,6 @@ import Skeleton from './Skeleton';
 import * as Typography from './Typography';
 
 const components = {
-  Alert,
   Badge,
   Button,
   Card,

@@ -1,4 +1,8 @@
-/* eslint-disable global-require */
+/** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
-  presets: [require('@resir014/tailwind-preset-chungking')],
+  content: [
+    './node_modules/@resir014/chungking-react/**/*.{js,jsx,ts,tsx}',
+    './node_modules/@chungking-ui/**/*.{js,jsx,ts,tsx}',
+  ],
+  plugins: [require('./packages/tailwindcss-plugin/src')],
 };
