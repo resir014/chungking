@@ -8,6 +8,12 @@ export default {
   title: 'Components/Badge',
   component: Badge,
   argTypes: {
+    size: {
+      control: {
+        type: 'select',
+        options: ['md', 'lg'],
+      },
+    },
     variant: {
       control: {
         type: 'select',
@@ -29,4 +35,5 @@ export const Example = Template.bind({});
 Example.args = {
   variant: 'solid',
   colorScheme: 'grey',
+  size: 'md',
 };

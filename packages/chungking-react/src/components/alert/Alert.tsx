@@ -7,15 +7,10 @@ export interface AlertProps extends React.ComponentPropsWithoutRef<'div'> {
   children?: React.ReactNode;
 }
 
-/**
- * @deprecated use `AlertProps` instead
- */
-export type MessageBoxProps = AlertProps;
-
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
   ({ className, children, variant = 'default', ...rest }, ref) => {
     return (
-      <div ref={ref} className={clsx('ck-alert', `ck-alert--${variant}`)} {...rest}>
+      <div ref={ref} role="alert" className={clsx('ck-alert', `ck-alert--${variant}`)} {...rest}>
         {children}
       </div>
     );
