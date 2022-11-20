@@ -1,8 +1,7 @@
+import clsx from 'clsx';
 import * as React from 'react';
-import { useComponentStyles } from '../../system';
-import { Box, BoxProps } from '../../layout';
 
-export interface AlertProps extends BoxProps {
+export interface AlertProps extends React.ComponentPropsWithoutRef<'div'> {
   className?: string;
   variant?: 'default' | 'primary' | 'success' | 'warning' | 'error';
   children?: React.ReactNode;
@@ -14,22 +13,15 @@ export interface AlertProps extends BoxProps {
 export type MessageBoxProps = AlertProps;
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
-  ({ className, children, variant = 'default', sx, ...rest }, ref) => {
-    const styles = useComponentStyles('Alert', { variant });
-
+  ({ className, children, variant = 'default', ...rest }, ref) => {
     return (
-      <Box ref={ref} className={className} boxShadow="single" sx={{ ...styles, ...sx }} {...rest}>
+      <div ref={ref} className={clsx('ck-alert', `ck-alert--${variant}`)} {...rest}>
         {children}
-      </Box>
+      </div>
     );
   },
 );
 
 Alert.displayName = 'Alert';
-
-/**
- * @deprecated use `Alert` instead
- */
-export const MessageBox = Alert;
 
 export default Alert;

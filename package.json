@@ -18,7 +18,7 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-feather": "^2.0.9",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.2.4"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",
@@ -33,7 +33,7 @@
     "@types/jest": "^27.0.3",
     "@types/react": "^17.0.37",
     "@types/react-dom": "^17.0.11",
-    "@types/tailwindcss": "^3.0.10",
+    "@types/tailwindcss": "^3.1.0",
     "babel-loader": "^8.2.3",
     "caniuse-lite": "^1.0.30001283",
     "cross-env": "^7.0.3",
@@ -51,7 +51,7 @@
     "jest-environment-jsdom": "^27.3.1",
     "lerna": "^3.22.1",
     "lint-staged": "^11.2.6",
-    "postcss": "^8.3.11",
+    "postcss": "^8.4.19",
     "prettier": "^2.5.0",
     "react-is": "^17.0.2",
     "rimraf": "^3.0.2",
