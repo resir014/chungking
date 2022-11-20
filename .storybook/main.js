@@ -38,7 +38,7 @@ module.exports = {
         ...config.resolve,
         alias: {
           ...config.resolve.alias,
-          // ...convertTsConfigPathsToWebpackAliases(),
+          ...convertTsConfigPathsToWebpackAliases(),
           // TODO: Remove once Storybook supports Emotion 11.
           // https://github.com/storybookjs/storybook/issues/10231
           '@emotion/core': toPath('node_modules/@emotion/react'),
