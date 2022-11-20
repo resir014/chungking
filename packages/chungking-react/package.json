@@ -1,6 +1,6 @@
 {
   "name": "@resir014/chungking-react",
-  "version": "0.3.2-canary.7",
+  "version": "0.3.2-canary.8",
   "description": "@resir014's personal design system.",
   "source": "src/index.ts",
   "main": "dist/index.js",
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@chakra-ui/css-reset": "^1.1.1",
-    "@resir014/chungking-core": "^0.1.2-canary.6",
+    "@resir014/chungking-core": "^0.1.2-canary.7",
     "@spicy-ui/styled-system": "^0.0.1-alpha.3",
     "clsx": "^1.1.1",
     "csstype": "^3.0.10",
