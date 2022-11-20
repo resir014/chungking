@@ -1,22 +1,25 @@
-# @resir014/tailwind-preset-chungking
+# @chungking-ui/tailwindcss-plugin
 
-> TailwindCSS preset for the Chungking design system.
+> Tailwind CSS plugin for Chungking UI.
 
 ## Installation
 
 ```bash
-yarn add @resir014/tailwind-preset-chungking
+yarn add @chungking-ui/tailwindcss-plugin
 ```
 
 ## Usage
 
-To use this preset, add this preset into the `presets` key in your project's `tailwind.config.js`:
+To use this preset, add this preset into the `plugins` key in your project's `tailwind.config.js`:
 
 ```js
 module.exports = {
-  presets: [require('@resir014/tailwind-preset-chungking')],
+  presets: [
+    // ...
+  ],
   theme: {
     // ...
   },
+  plugins: [require('@chungking-ui/tailwindcss-plugin')],
 };
 ```
